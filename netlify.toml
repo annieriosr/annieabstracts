@@ -17,26 +17,141 @@
   status = 301
 
 [[redirects]]
+  from = "/collections"
+  to = "/work"
+  status = 301
+
+[[redirects]]
+  from = "/show-me-a-feeling"
+  to = "/showmeafeeling"
+  status = 301
+
+[[redirects]]
+  from = "/abstraction-2019-2021"
+  to = "/thisisabstraction"
+  status = 301
+
+[[redirects]]
+  from = "/the-three-elements-of-a-refraction"
+  to = "/threeelementsofarefraction"
+  status = 301
+
+[[redirects]]
+  from = "/threeelementsofarefraction/available-works"
+  to = "/threeelementsofarefraction"
+  status = 301
+
+[[redirects]]
   from = "/journal/panama-madrid-paris-artist-journey"
   to = "/journal/panama-madrid-paris"
   status = 301
 
 [[redirects]]
-  from = "/journal"
-  to = "/itinerary"
+  from = "/journal/artist-journey-panama-madrid-paris"
+  to = "/journal/geography-shaped-my-voice"
   status = 301
 
 [[redirects]]
-  from = "/journal/*"
-  to = "/itinerary"
+  from = "/journal/refraction-collection-explained"
+  to = "/journal/refraction-collection-explained/"
   status = 301
 
 [[redirects]]
-  from = "/studio"
-  to = "/about"
+  from = "/journal/chromatic-flattening-technique"
+  to = "/journal/chromatic-flattening-technique/"
   status = 301
 
 [[redirects]]
-  from = "/collections"
-  to = "/work"
+  from = "/journal/pianist-to-visual-artist"
+  to = "/journal/pianist-to-visual-artist/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/from-pianist-to-visual-artist"
+  to = "/journal/from-pianist-to-visual-artist/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/color-relationships-abstract-art"
+  to = "/journal/color-relationships/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/emotions-abstract-expressionism"
+  to = "/journal/emotions-abstract-expressionism/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/exploring-abstract-art-paris"
+  to = "/journal/exploring-abstract-art-paris/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/creating-art-pandemic"
+  to = "/journal/creating-art-pandemic/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/show-me-feeling-series-story"
+  to = "/journal/show-me-a-feeling/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/process-pouring-layering"
+  to = "/journal/process-pouring-layering/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/refraction-artistic-philosophy"
+  to = "/journal/refraction-artistic-philosophy/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/centro-espacio-arte-exhibition"
+  to = "/journal/centro-espacio-arte/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/rhythms-reflections-urban-light"
+  to = "/journal/rhythms-and-reflections/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/artist-journey-panama-paris"
+  to = "/journal/artist-journey-panama-paris/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/composition-of-refraction-explained"
+  to = "/journal/"
+  status = 301
+
+[[redirects]]
+  from = "/journal/materials-and-studio-practice"
+  to = "/studio/"
+  status = 301
+
+[[redirects]]
+  from = "/artist-journey-panama-paris.html"
+  to = "/journal/artist-journey-panama-paris/"
+  status = 301
+
+[[redirects]]
+  from = "/chromatic-flattening-technique.html"
+  to = "/journal/chromatic-flattening-technique/"
+  status = 301
+
+[[redirects]]
+  from = "/color-relationships-abstract-art.html"
+  to = "/journal/color-relationships/"
+  status = 301
+
+[[redirects]]
+  from = "/from-pianist-to-visual-artist.html"
+  to = "/journal/from-pianist-to-visual-artist/"
+  status = 301
+
+[[redirects]]
+  from = "/refraction-collection-explained.html"
+  to = "/journal/refraction-collection-explained/"
   status = 301

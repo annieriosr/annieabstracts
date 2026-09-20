@@ -1,6 +1,6 @@
 # Migration map — Phase 0
 
-Status: **waiting for your approval before any page is rebuilt.**
+Status: **Phase 1–2 built on `content-merge`.** Approved 20 Sep 2026: `_old-site` as archive; Journal/Studio live for SEO only (no nav, no links from other pages); old bio restored; Itinerary = August 2026 CV; Home/Work/CSS rebuilt; En|Es only where Spanish already existed.
 
 This file maps every piece of the old site onto the new one.  
 I have not copied, rewritten, or deleted any content yet.
