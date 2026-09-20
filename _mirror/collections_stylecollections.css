@@ -1,0 +1,773 @@
+/* =============================================== */
+/*   COLLECTIONS PAGE STYLES - FIXED HEADER       */
+/* =============================================== */
+
+/* ---------- HOST GROTESK FONT FACES ---------- */
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+:root {
+    --font-family: 'Host Grotesk', sans-serif;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #666666;
+    --light-gray: #f5f5f5;
+    --transition: all 0.3s ease;
+    --transition-slow: all 0.8s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    font-family: var(--font-family);
+    color: var(--black);
+    overflow-x: hidden;
+    height: 100%;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+}
+
+/* ---------- SOCIAL MEDIA LINKS ---------- */
+.social-media-links {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.social-media-links a {
+    color: var(--black);
+    font-size: 18px;
+    text-decoration: none;
+    transition: var(--transition);
+    opacity: 0.7;
+}
+
+.social-media-links a:hover {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* ---------- HEADER STYLES (FIXED SINGLE ROW) ---------- */
+.custom-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    z-index: 100;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-left h1 {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--black);
+    margin: 0;
+    transition: var(--transition);
+}
+
+.header-left h1:hover {
+    font-style: italic;
+}
+
+.header-left a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-center {
+    flex: 2;
+    text-align: center;
+}
+
+.header-center h2 {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 2px;
+    color: var(--black);
+    letter-spacing: 0.05em;
+}
+
+.header-center p {
+    font-size: 12px;
+    color: var(--gray);
+    font-weight: 300;
+    letter-spacing: 0.03em;
+}
+
+.header-extras {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-option {
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.03em;
+}
+
+.menu-option:hover {
+    font-style: italic;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.lang-option {
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 0.6;
+}
+
+.lang-option.active,
+.lang-option:hover {
+    opacity: 1;
+}
+
+.lang-separator {
+    opacity: 0.4;
+}
+
+
+
+
+/* ---------- FULLSCREEN MENU ---------- */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fullscreen-menu:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-items {
+    text-align: center;
+}
+
+.menu-item {
+    margin: 25px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fullscreen-menu:not(.hidden) .menu-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-item a {
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--black);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    letter-spacing: 0.02em;
+}
+
+.menu-item a:hover {
+    font-style: italic;
+    transform: translateX(10px);
+}
+
+.fullscreen-menu hr {
+    width: 80px;
+    border: none;
+    border-top: 1px solid var(--black);
+    margin: 15px auto;
+    opacity: 0.3;
+}
+
+/* ---------- HORIZONTAL IMAGE GRID - DESKTOP ---------- */
+.image-grid {
+    display: flex;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.image-container {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--white);
+    transition: var(--transition-slow);
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.image-container:last-child {
+    border-right: none;
+}
+
+.image-container:hover {
+    flex: 1.2;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.collection-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.3) 0%,
+        rgba(0,0,0,0.1) 50%,
+        rgba(0,0,0,0.3) 100%
+    );
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.image-container:hover .collection-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.5) 0%,
+        rgba(0,0,0,0.2) 50%,
+        rgba(0,0,0,0.5) 100%
+    );
+}
+
+.number {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    font-size: 100px;
+    font-weight: 300;
+    opacity: 0.3;
+    z-index: 2;
+    transition: var(--transition);
+    letter-spacing: -0.02em;
+}
+
+.image-container:hover .number {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.collection-details {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.collection-name {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 8px;
+    transition: var(--transition);
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.image-container:hover .collection-name {
+    transform: translateY(-5px);
+}
+
+.collection-year {
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.8;
+    transform: translateY(10px);
+    transition: var(--transition-slow);
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.image-container:hover .collection-year {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- UTILITY CLASSES ---------- */
+.hidden {
+    display: none !important;
+}
+
+/* =============================================== */
+/*   RESPONSIVE BREAKPOINTS - FIXED HEADER        */
+/* =============================================== */
+
+/* ---------- LAPTOP (1024px and below) ---------- */
+@media (max-width: 1024px) {
+    .social-media-links {
+        left: 20px;
+    }
+    
+    .custom-header {
+        padding: 15px 30px;
+    }
+    
+    .header-left h1 {
+        font-size: 17px;
+    }
+    
+    .header-center h2 {
+        font-size: 13px;
+    }
+    
+    .header-center p {
+        font-size: 11px;
+    }
+    
+    .menu-option {
+        font-size: 13px;
+    }
+    
+    .language-switcher {
+        font-size: 11px;
+    }
+    
+    .image-grid {
+        padding-top: 70px;
+    }
+    
+    .number {
+        left: 30px;
+        font-size: 80px;
+    }
+    
+    .collection-details {
+        left: 30px;
+        bottom: 30px;
+    }
+    
+    .collection-name {
+        font-size: 24px;
+    }
+    
+    .menu-item a {
+        font-size: 36px;
+    }
+}
+
+/* ---------- TABLET (768px and below) ---------- */
+@media (max-width: 768px) {
+    .social-media-links {
+        display: none;
+    }
+    
+    .custom-header {
+        padding: 12px 20px;
+        /* Keep flex-direction: row (no change) */
+    }
+    
+    .header-left h1 {
+        font-size: 16px;
+    }
+    
+    .header-center h2 {
+        font-size: 12px;
+    }
+    
+    .header-center p {
+        font-size: 10px;
+    }
+    
+    .menu-option {
+        font-size: 12px;
+    }
+    
+    .language-switcher {
+        font-size: 11px;
+        gap: 6px;
+    }
+    
+    .header-extras {
+        gap: 15px;
+    }
+    
+    .image-grid {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        padding-top: 80px; /* Reduced padding for smaller header */
+    }
+    
+    .image-container {
+        height: 33.33vh;
+        min-height: 250px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .image-container:hover {
+        flex: none;
+        height: 40vh;
+    }
+    
+    .image-container:hover img {
+        transform: scale(1.03);
+    }
+    
+    .number {
+        left: 20px;
+        font-size: 60px;
+        top: 50%;
+    }
+    
+    .collection-details {
+        left: 20px;
+        bottom: 20px;
+    }
+    
+    .collection-name {
+        font-size: 20px;
+    }
+    
+    .collection-year {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .menu-item a {
+        font-size: 28px;
+    }
+}
+
+/* ---------- MOBILE (480px and below) ---------- */
+@media (max-width: 480px) {
+    .custom-header {
+        padding: 10px 15px;
+    }
+    
+    .header-left h1 {
+        font-size: 14px;
+    }
+    
+    .header-center h2 {
+        font-size: 11px;
+        margin-bottom: 1px;
+    }
+    
+    .header-center p {
+        font-size: 9px;
+    }
+    
+    .menu-option {
+        font-size: 11px;
+    }
+    
+    .language-switcher {
+        font-size: 10px;
+        gap: 4px;
+    }
+    
+    .header-extras {
+        gap: 12px;
+    }
+    
+    .image-grid {
+        padding-top: 70px; /* Further reduced for mobile */
+    }
+    
+    .image-container {
+        height: 30vh;
+        min-height: 200px;
+    }
+    
+    .image-container:hover {
+        height: 35vh;
+    }
+    
+    .number {
+        left: 15px;
+        font-size: 50px;
+    }
+    
+    .collection-details {
+        left: 15px;
+        bottom: 15px;
+    }
+    
+    .collection-name {
+        font-size: 18px;
+    }
+    
+    .collection-year {
+        font-size: 12px;
+    }
+    
+    .menu-item a {
+        font-size: 24px;
+    }
+    
+    .fullscreen-menu hr {
+        width: 60px;
+        margin: 10px auto;
+    }
+}
+
+/* ---------- SMALL MOBILE (360px and below) ---------- */
+@media (max-width: 360px) {
+    .custom-header {
+        padding: 8px 12px;
+    }
+    
+    .header-left h1 {
+        font-size: 13px;
+    }
+    
+    .header-center h2 {
+        font-size: 10px;
+    }
+    
+    .header-center p {
+        font-size: 8px;
+    }
+    
+    .menu-option {
+        font-size: 10px;
+    }
+    
+    .language-switcher {
+        font-size: 9px;
+    }
+    
+    .header-extras {
+        gap: 10px;
+    }
+    
+    .image-grid {
+        padding-top: 65px;
+    }
+    
+    .image-container {
+        height: 28vh;
+        min-height: 180px;
+    }
+    
+    .number {
+        left: 12px;
+        font-size: 40px;
+    }
+    
+    .collection-details {
+        left: 12px;
+        bottom: 12px;
+    }
+    
+    .collection-name {
+        font-size: 16px;
+    }
+    
+    .collection-year {
+        font-size: 11px;
+    }
+    
+    .menu-item a {
+        font-size: 22px;
+    }
+}
+
+/* ---------- LANDSCAPE MOBILE ---------- */
+@media (max-height: 500px) and (orientation: landscape) {
+    .custom-header {
+        padding: 8px 20px;
+    }
+    
+    .header-left h1 {
+        font-size: 14px;
+    }
+    
+    .header-center h2 {
+        font-size: 11px;
+    }
+    
+    .header-center p {
+        font-size: 9px;
+    }
+    
+    .image-grid {
+        padding-top: 60px;
+        flex-direction: row;
+        height: 100vh;
+    }
+    
+    .image-container {
+        height: 100%;
+        border-right: 1px solid rgba(255,255,255,0.1);
+        border-bottom: none;
+    }
+    
+    .image-container:hover {
+        flex: 1.2;
+        height: 100%;
+    }
+    
+    .number {
+        font-size: 60px;
+    }
+    
+    .collection-name {
+        font-size: 20px;
+    }
+    
+    .menu-item a {
+        font-size: 24px;
+    }
+}
+
+/* ---------- VERY SMALL SCREENS (320px and below) ---------- */
+@media (max-width: 320px) {
+    .custom-header {
+        padding: 6px 10px;
+    }
+    
+    .header-left h1 {
+        font-size: 12px;
+    }
+    
+    .header-center h2 {
+        font-size: 9px;
+    }
+    
+    .header-center p {
+        font-size: 7px;
+    }
+    
+    .menu-option {
+        font-size: 9px;
+    }
+    
+    .language-switcher {
+        font-size: 8px;
+    }
+    
+    .image-grid {
+        padding-top: 60px;
+    }
+    
+    .collection-name {
+        font-size: 15px;
+    }
+}
+
+/* ---------- HIGH-DPI SCREENS ---------- */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .image-container img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .image-container:hover {
+        transform: none;
+    }
+    
+    .image-container:hover img {
+        transform: none;
+    }
+    
+    .image-container:hover .number,
+    .image-container:hover .collection-name,
+    .image-container:hover .collection-year {
+        transform: none;
+    }
+}
+
+

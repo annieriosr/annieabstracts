@@ -1,0 +1,42 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/collections/this-is-abstraction"
+  to = "/thisisabstraction"
+  status = 301
+
+[[redirects]]
+  from = "/collections/show-me-a-feeling"
+  to = "/showmeafeeling"
+  status = 301
+
+[[redirects]]
+  from = "/collections/three-elements-of-a-refraction"
+  to = "/threeelementsofarefraction"
+  status = 301
+
+[[redirects]]
+  from = "/journal/panama-madrid-paris-artist-journey"
+  to = "/journal/panama-madrid-paris"
+  status = 301
+
+[[redirects]]
+  from = "/journal"
+  to = "/itinerary"
+  status = 301
+
+[[redirects]]
+  from = "/journal/*"
+  to = "/itinerary"
+  status = 301
+
+[[redirects]]
+  from = "/studio"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/collections"
+  to = "/work"
+  status = 301

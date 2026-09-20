@@ -1,0 +1,1004 @@
+/* ===============================================
+THE-STUDIO CSS
+=============================================== */
+
+/* ---------- RESET & BASE STYLES ---------- */
+
+/* Global
+=================================== */
+@import url("style_reset.css");
+@import url("style_text.css");
+@import url("style_global.css");
+@import url("style_media.css");
+@import url("style_gradient.css");
+@import url("style_cursor.css");
+@import url("style_animations.css");
+
+/* Modules
+=================================== */
+@import url("style_module-blocks.css");
+@import url("style_module-description.css");
+@import url("style_module-drawer.css");
+@import url("style_module-links.css");
+@import url("style_module-carousel.css");
+
+/* Home
+=================================== */
+@import url("style_header.css");
+@import url("style_index.css");
+
+/* Projects
+=================================== */
+@import url("style_projects.css");
+@import url("style_marquee.css");
+
+/* Project page
+=================================== */
+@import url("style_project.css");
+@import url("style_project-hero.css");
+@import url("style_project-infos.css");
+@import url("style_project-embed.css");
+
+/* Collaborations
+=================================== */
+@import url("style_module-slider.css"); /* !!! Not sure about the tablet breakpoint */
+
+/* Bio
+=================================== */
+@import url("style_bio.css");
+
+/* Texts
+=================================== */
+@import url("style_filters.css");
+@import url("style_module-list.css");
+
+/* News
+=================================== */
+@import url("style_news.css");
+
+/* Drawings
+=================================== */
+@import url("style_drawings.css");
+
+/* Shop
+=================================== */
+@import url("style_shop.css");
+@import url("style_product.css");
+
+/* Comments
+=================================== */
+@import url("style_forms.css");
+@import url("style_comments.css");
+
+/* Vars & Global Variables
+=================================== */
+:root {
+  /* Colors */
+  --color-bg: white;
+  --color-txt: black;
+  --color-texts: black;
+  --color-press: black;
+  --color-disabled: #C2C2C2;
+  --color-txt-highlight: #C2C2C2;
+  --color-lines: black;
+
+  /* Elements */
+  --height-viewport: 500vh;
+  --height-gradient: calc(var(--m-global) * 6); /* 120px */
+  --height-header: var(--height-gradient); /* 120px */
+  --icon: 2.976190vw; /* approx 50px */
+  --border-radius: calc(var(--m-global) * 1.25); /* 25px */
+  --pos-y: var(--m-global); /* 20px */
+  --m-global: 1.190476vw; /* approx 20px */
+
+  /* Page */
+  --page-top: calc(var(--m-global) / 2); /* 10px */
+  --page-sides: var(--m-global); /* 20px */
+  --page-bottom: calc(var(--m-global) * 6); /* 120px */
+  --page-bottom-type: calc(var(--m-global) * 0.75); /* 15px */
+
+  /* Cols */
+  --cols-gap: calc(var(--m-global) / 2); /* 10px */
+  --cols-gap-l: var(--m-global); /* 20px */
+
+  /* Rows */
+  --rows-gap-s: calc(var(--m-global) / 2); /* 10px */
+  --rows-gap-m: var(--m-global); /* 20px */
+  --rows-gap-l: calc(var(--m-global) * 2); /* 40px */
+  --rows-gap-e: calc(var(--m-global) * 4); /* 80px */
+  --rows-gap-xl: calc(var(--m-global) * 6); /* 120px */
+
+  /* Texts */
+  --rows-txt-s: var(--m-global); /* 20px */
+
+  /* Easing */
+  --speed: 200ms;
+}
+
+@media (max-width: 1680px) {
+  :root {
+    --icon: 50px;
+    --m-global: 20px;
+  }
+}
+@media (max-width: 834px) {
+  :root {
+    --height-header: calc(var(--page-top) + var(--fs-l) * var(--lh-l) + var(--rows-gap-e));
+    --icon: 40px;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --m-global: 15px;
+    --rows-txt-s: 10px;
+  }
+}
+
+/* Animations
+=================================== */
+@-webkit-keyframes marquee-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes marquee-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes levitate {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2%);
+            transform: translateY(-2%);
+  }
+}
+@keyframes levitate {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-2%);
+            transform: translateY(-2%);
+  }
+}
+
+/* Bio
+=================================== */
+.bio main {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: var(--rows-gap-e);
+}
+.module {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: min-content;
+  column-gap: var(--cols-gap-l);
+  align-items: flex-start;
+}
+.module a {
+  text-decoration: none;
+  text-decoration-thickness: 0.06em;
+  text-decoration-color: var(--color-lines);
+  text-underline-offset: 0.1em;
+}
+.desktop .module a:hover,
+.mobile .module a:active {
+  color: var(--color-txt-highlight);
+  text-decoration-color: var(--color-txt-highlight);
+}
+@media (max-width: 600px) {
+  .module {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* ===============================================
+THE-STUDIO SPECIFIC CSS
+=============================================== */
+
+/* Host Grotesk Font (ensuring consistent typography) */
+
+/* Host Grotesk Light */
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Host Grotesk Light Italic */
+@font-face {
+  font-family: 'Host Grotesk';
+  src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+  @font-face {
+    font-family: 'Nomada Didone';
+    src: url('../fonts/NomadaDidone-Hairline.woff2') format('woff2'),
+         url('../fonts/NomadaDidone-Hairline.woff') format('woff');
+    font-weight: 100; /* Hairline weight */
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Nomada Didone';
+    src: url('../fonts/NomadaDidone-HairlineItalic.woff2') format('woff2'),
+         url('../fonts/NomadaDidone-HairlineItalic.woff') format('woff');
+    font-weight: 100; /* Hairline weight */
+    font-style: italic;
+    font-display: swap;
+  }
+  
+
+  @font-face {
+    font-family: 'Nomada Didone';
+    src: url('../fonts/NomadaDidone-Extrathin.woff2') format('woff2'),
+         url('../fonts/NomadaDidone-Extrathin.woff') format('woff');
+    font-weight: 200; /* Extra Thin */
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Nomada Didone';
+    src: url('../fonts/NomadaDidone-ExtrathinItalic.woff2') format('woff2'),
+         url('../fonts/NomadaDidone-ExtrathinItalic.woff') format('woff');
+    font-weight: 200; /* Extra Thin */
+    font-style: italic;
+    font-display: swap;
+  }
+  
+
+
+  @font-face {
+    font-family: 'Lora';
+    src: 
+         url('../fonts/Lora-VariableFont_wght.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Lora';
+    src: 
+         url('../fonts/Lora-Italic-VariableFont_wght.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Lora Italic';
+    src: 
+         url('../fonts/Lora-Italic-VariableFont_wght.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+
+
+/* Global Styles for The Studio Page */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Clean white background */
+  font-family: 'Host Grotesk', sans-serif;
+  color: #000000; /* Black text */
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  
+}
+
+/* ---------- Navigation Bar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--m-global);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 1000;
+}
+
+.navbar .nav-left,
+.navbar .nav-center,
+.navbar .nav-right {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 300;
+  flex: 1;
+  text-decoration: none;
+  color: black;
+}
+
+/* Align left section */
+.navbar .nav-left {
+  text-align: left;
+}
+
+/* Center section remains centered */
+.navbar .nav-center {
+  text-align: center;
+}
+
+/* Right section: add padding to avoid flush right */
+.navbar .nav-right {
+  text-align: right;
+  padding-right: 2rem; /* Adjust as needed */
+  text-decoration: none !important;
+  color: #000000 !important;
+}
+
+.navbar .nav-right a {
+  color: #000000 !important;      /* Noir color */
+  text-decoration: none !important;
+}
+
+/* Correct hover effects */
+
+.nav-right:hover {
+  text-decoration: line-through;
+}
+.navbar .nav-right a:hover {
+  text-decoration: line-through;
+}
+
+
+/* ---------- Gradient Top ---------- */
+#gradient-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	height: var(--height-gradient);
+	padding: var(--page-top) var(--page-sides) 0;
+	display: grid;
+	text-decoration: none;
+	grid-auto-rows: min-content;
+	-webkit-user-select: none;
+		 user-select: none;
+	background: linear-gradient(rgba(255,255,255,.99) 40%, rgba(255,255,255,.7) 70%, rgba(255,255,255,0));
+	z-index: 9;
+}
+/* ---------- Mobile: up to 767px ---------- */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: row;           /* Keep horizontal layout */
+    justify-content: space-between; /* Distribute left/right items */
+    align-items: center;
+    padding: 1rem;                 /* Adjust padding for smaller screens */
+  }
+
+  /* First element: stays on the top left */
+  .navbar .nav-left {
+    text-align: left;
+  }
+
+  /* Second element: moves to the top right */
+  .navbar .nav-center {
+    text-align: right;
+    flex: 1; /* Allow this element to take up available space */
+  }
+
+  /* Third element: fixed at the bottom left */
+  .navbar .nav-right {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;  /* Increase for better touch targets if needed */
+    z-index: 1000;
+    /* Optional: add a background if needed for contrast */
+    /* background: rgba(255, 255, 255, 0.9); */
+  }
+
+  /* Adjust gradient if needed */
+  #gradient-top {
+    padding: 1rem;
+    height: auto;
+  }
+}
+
+/* ---------- Tablet: between 768px and 1024px ---------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;  /* Slightly more padding on tablet screens */
+  }
+
+  .navbar .nav-left {
+    text-align: left;
+  }
+
+  .navbar .nav-center {
+    text-align: right;
+    flex: 1;
+  }
+
+  .navbar .nav-right {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;  /* Adjust padding for touch usability */
+    z-index: 1000;
+  }
+
+  #gradient-top {
+    padding: 1.5rem;
+  }
+}
+
+/* Intro Overlay */
+.intro-overlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background: rgba(255, 255, 255, 0.9); 
+  backdrop-filter: blur(10px); 
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  z-index: 10000; 
+  transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-overlay.active {
+  opacity: 1;
+  pointer-events: auto; 
+  display: flex; /* or block, as needed */
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
+  width: 100%;
+  max-width: 70vw; /* was 50rem -> ~70vw for wide screens */
+}
+
+.intro {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 1.5rem; /* keep text in rem */
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+  color: #000;
+  opacity: 1; 
+}
+
+
+/* ---------- Gallery Container ---------- */
+/* ---------- Gallery Container ---------- */
+.gallery {
+  position: relative;
+  width: 100%;
+  min-height: 800vh; /* Increased height for more vertical space */
+  overflow: hidden;
+  background: white; /* White background for minimalist feel */
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+/* ---------- Gallery Item Base Style ---------- */
+.gallery-item {
+  position: absolute;
+  overflow: hidden;
+  transition: transform 0.8s ease, opacity 0.8s ease, filter 0.8s ease;
+}
+
+
+/* ---------- Image Size Classes (Varying sizes) ---------- */
+.gallery-item.xsmall {
+  width: 100px; /* Extra small images */
+  height: 160px; /* Portrait orientation */
+}
+
+.gallery-item.small {
+  width: 160px; /* Smaller images */
+  height: 210px; /* Portrait orientation */
+}
+
+.gallery-item.medium {
+  width: 190px; /* Medium images */
+  height: 280px; /* Portrait orientation */
+}
+
+
+
+/* ---------- Images & Videos Style ---------- */
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio without distortion */
+  display: block;
+  opacity: 0;
+  transform: translateX(var(--parallax-x, 0)) translateY(var(--parallax-y, 20px)) scale(0.95);
+  filter: blur(2px);
+  transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+.gallery-item img.visible,
+.gallery-item video.visible {
+  opacity: 1;
+  transform: translateX(var(--parallax-x, 0)) translateY(var(--parallax-y, 0)) scale(1);
+  filter: blur(0);
+}
+
+/* ---------- Hover Focus Mode ---------- */
+.gallery-item.hovered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.6);
+  z-index: 1000;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* When an item is hovered, fade out the other items */
+.gallery.item-hovered .gallery-item:not(.hovered) {
+  opacity: 0.2;
+  filter: blur(4px);
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item.hovered img,
+.gallery-item.hovered video {
+  /* Ensure the media inside the hovered item is fully visible */
+  opacity: 1 !important;
+  filter: none !important;
+}
+/* ---------- Video Specific ---------- */
+.gallery-item video {
+  cursor: pointer;
+}
+
+/* ---------- Fixed Title ---------- */
+.fixed-title {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 48px; /* Adjust size as needed */
+  font-weight: 300; /* Ensures it appears light */
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 900;
+  color: black; /* Adjust for contrast */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  letter-spacing: 1px; /* Adds subtle spacing */
+  width: auto; /* Allows it to size dynamically */
+  white-space: nowrap; /* Prevents unwanted wrapping */
+}
+
+.fixed-title h2 {
+  margin: 0;
+  display: flex;
+  font-weight: 300 !important;
+  flex-direction: column; /* Stacks each word */
+  align-items: center; /* Centers words */
+  line-height: 1.2; /* Adjusts spacing between words */
+}
+
+.fixed-title span {
+  display: block; /* Ensures each word appears on a new line */
+}
+
+
+/* Optional: Add an effect when hovered */
+.fixed-title:hover span {
+font-style: italic;
+text-decoration: line-through;
+}
+
+
+/* ---------- Tablet Adjustments (768px - 1024px) ---------- */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .gallery {
+    min-height: 500vh; /* Reduced vertical space */
+  }
+  
+  /* Scale down gallery items moderately */
+  .gallery-item.xsmall {
+    width: 80px;
+    height: 128px;
+  }
+  
+  .gallery-item.small {
+    width: 130px;
+    height: 170px;
+  }
+  
+  .gallery-item.medium {
+    width: 150px;
+    height: 220px;
+  }
+  
+  /* Adjust image/video transforms */
+  .gallery-item img,
+  .gallery-item video {
+    transform: translateX(var(--parallax-x, 0)) translateY(var(--parallax-y, 15px)) scale(0.92);
+  }
+  
+  .gallery-item img.visible,
+  .gallery-item video.visible {
+    transform: translateX(var(--parallax-x, 0)) translateY(var(--parallax-y, 0)) scale(1);
+  }
+  
+  /* Tame the hover effect */
+  .gallery-item.hovered {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  
+  /* Scale down fixed title font */
+  .fixed-title {
+    font-size: 36px;
+  }
+}
+
+/* ---------- Mobile Adjustments (up to 767px) ---------- */
+@media (max-width: 767px) {
+  .gallery {
+    min-height: 300vh; /* Adjusted for mobile scrolling */
+  }
+  
+  /* Further scale down gallery items */
+  .gallery-item.xsmall {
+    width: 60px;
+    height: 96px;
+  }
+  
+  .gallery-item.small {
+    width: 100px;
+    height: 131px;
+  }
+  
+  .gallery-item.medium {
+    width: 130px;
+    height: 190px;
+  }
+  
+  /* Adjust transforms for smaller screens */
+  .gallery-item img,
+  .gallery-item video {
+    transform: translateX(var(--parallax-x, 0)) translateY(var(--parallax-y, 10px)) scale(0.9);
+  }
+  
+  .gallery-item img.visible,
+  .gallery-item video.visible {
+    transform: translateX(var(--parallax-x, 0)) translateY(var(--parallax-y, 0)) scale(1);
+  }
+  
+  /* Reduce hover scale */
+  .gallery-item.hovered {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  
+  /* Scale down the fixed title even more */
+  .fixed-title {
+    font-size: 28px;
+  }
+}
+
+footer {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 14px; /* Adjust size as needed */
+  font-weight: 300; /* Adjust weight as needed */
+  text-align: center;
+  color: black; /* Or any color that fits your design */
+  background: white; /* Keep it minimalistic */
+  position: relative; /* Ensure proper placement */
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  letter-spacing: 0.5px; /* Subtle spacing for a refined look */
+  opacity: 0.8; /* Slight transparency for a softer effect */
+}
+
+
+/* Tablet Adjustments (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  footer {
+    font-size: 13px; /* Slightly smaller font size for tablets */
+    padding: 0.75rem 0;
+  }
+}
+
+/* Mobile Adjustments (up to 767px) */
+@media (max-width: 767px) {
+  footer {
+    font-size: 12px; /* Further reduced font size for mobile */
+    padding: 0.5rem 0;
+  }
+}
+
+
+
+
+
+
+
+/* ===============================================
+   MOBILE RESPONSIVENESS (up to 768px)
+=============================================== */
+/* ===============================================
+   MOBILE RESPONSIVENESS (up to 768px)
+=============================================== */
+
+@media (max-width: 768px) {
+  /* Ensure no horizontal scrolling */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Composition Section */
+  .composition {
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    overflow: hidden; /* Prevent images from overflowing */
+  }
+
+  .central-photo {
+    position: absolute;
+    top: 10vh; /* Push image higher */
+    left: 5vw; /* Adjust based on viewport width */
+    width: 50vw; /* Adjust width for mobile */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 4;
+  }
+
+  .bottom-right-photo {
+    position: absolute;
+    top: 20vh; /* Push image higher */
+    right: 5vw; /* Adjust based on viewport width */
+    width: 40vw; /* Adjust width for mobile */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 5;
+  }
+
+  /* Image Sections */
+  .image-section {
+    height: 100vh; /* Each section takes full viewport height */
+    padding: 5vh 5vw; /* Add padding based on viewport */
+    margin-bottom: 5vh; /* Add space between sections */
+    position: relative;
+    overflow: hidden; /* Prevent images from overflowing */
+  }
+
+  .painting {
+    position: relative;
+    text-align: center;
+    margin: 2vh 0; /* Add space between images */
+  }
+
+  .painting img {
+    max-width: 90vw; /* Reduce image size for better fit */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 100vh; /* Full viewport height */
+    margin-bottom: 5vh; /* Add space below hero section */
+    position: relative;
+    overflow: hidden; /* Prevent images from overflowing */
+  }
+
+  .title1 {
+    font-size: 10vw; /* Adjust font size for mobile */
+    margin-bottom: 2vh;
+  }
+
+  .subtitle1 {
+    font-size: 8vw; /* Adjust font size for mobile */
+  }
+
+  /* Header & Navigation */
+  .header-container {
+    padding: 2vh 5vw; /* Adjust padding based on viewport */
+  }
+
+  .header-left h1 {
+    font-size: 6vw; /* Adjust font size for mobile */
+  }
+
+  .menu-option,
+  .language-switcher {
+    font-size: 4vw; /* Adjust font size for mobile */
+    margin-left: 2vw;
+  }
+
+  /* Fullscreen Menu */
+  .fullscreen-menu {
+    padding: 5vh 5vw; /* Add padding based on viewport */
+  }
+
+  .menu-item {
+    font-size: 8vw; /* Adjust font size for mobile */
+  }
+
+  /* Footer */
+  footer {
+    font-size: 3.5vw; /* Adjust font size for mobile */
+    margin: 2vh auto;
+  }
+}
+
+
+@media (max-width: 600px) {
+  /* Extend the gallery container height so all images can be scrolled into view */
+  .gallery {
+    /* Increase the vertical space so items are not squeezed */
+    min-height: 800vh; /* Adjust this value as needed based on your content */
+    overflow: hidden;  /* You can keep hidden if items are positioned within a tall area */
+  }
+  
+  /* Adjust the Navigation Bar for mobile */
+  .navbar {
+    /* Keep the nav bar fixed at the top across the screen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: transparent;  /* or add a subtle background for contrast if needed */
+    z-index: 1000;
+    
+    /* Arrange nav items in a single row */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Ensure each nav section aligns properly in the row */
+  .navbar .nav-left,
+  .navbar .nav-center,
+  .navbar .nav-right {
+    /* Remove any fixed positioning */
+    position: static;
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Specific alignments */
+  .navbar .nav-left {
+    text-align: left;
+  }
+  
+  .navbar .nav-center {
+    text-align: center;
+  }
+  
+  .navbar .nav-right {
+    text-align: right;
+    padding-right: 1rem;
+  }
+  
+  /* (Optional) Adjust the gradient top if it overlaps with the nav */
+  #gradient-top {
+    padding: 1rem;
+    height: auto;
+  }
+
+/* Intro Overlay */
+.intro-overlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background: rgba(255, 255, 255, 0.9); 
+  backdrop-filter: blur(10px); 
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  z-index: 10000; 
+  transition: opacity 0.3s ease, backdrop-filter 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-overlay.active {
+  opacity: 1;
+  pointer-events: auto; 
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
+  width: 100%;
+  max-width: 70vw; /* was 50rem -> ~70vw for wide screens */
+}
+
+.intro {
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 1.5rem; /* keep text in rem */
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+  color: #000;
+  opacity: 1; 
+}
+
+}
+/* ---------- Tablet: between 768px and 1024px ---------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;  /* Adjust padding for tablet screens */
+    position: fixed;  /* Keep navbar fixed at the top */
+    top: 0;
+    width: 100%;
+    background: transparent; /* or add a subtle background if needed */
+    z-index: 1000;
+  }
+
+  .navbar .nav-left {
+    text-align: left;
+    flex: 1;
+  }
+
+  .navbar .nav-center {
+    text-align: center;
+    flex: 1;
+  }
+
+  .navbar .nav-right {
+    /* Remove fixed bottom positioning for tablets so that all items are aligned at the top */
+    position: static;
+    text-align: right;
+    flex: 1;
+    padding-right: 1.5rem; /* Adjust padding for touch targets if needed */
+  }
+
+  #gradient-top {
+    padding: 1.5rem;
+  }
+}
