@@ -1,409 +1,74 @@
-﻿<!DOCTYPE html>
-<!--
- Annie Rios
- Design by Annie Rios
- Code by Annie Rios
- @annieabstracts
- Â©ï¸ 2025
--->
+<!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>This is Abstraction | Annie Ríos</title>
+  <meta name="description" content="This is Abstraction at Gallery Artisans & Co., Lanzarote (2022–2023).">
+  <link rel="canonical" href="https://www.annieabstracts.com/thisisabstraction">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
- <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
- <!-- SEO / Metadata -->
- <meta name="description" content="Explore Annie Rios's collection 'Abstraction 2019-2021,' featuring abstract compositions from 2019 to 2021">
- <meta name="keywords" content="Annie Rios, abstract art, modern art, expressionism, contemporary art, Abstraction 2019-2021">
- <meta name="author" content="Annie Rios">
- <meta name="robots" content="index, follow">
- <link rel="canonical" href="https://www.annieabstracts.com/abstraction-2019-2021">
- 
- <!-- Favicon -->
- 
- 
- <!-- Format Detection -->
- <meta name="format-detection" content="date=no">
- <meta name="format-detection" content="email=no">
- <meta name="format-detection" content="address=no">
- <meta name="format-detection" content="telephone=no">
- 
- <!-- Twitter Card -->
- <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:title" content="Abstraction 2019-2021 - Annie Rios">
- <meta name="twitter:description" content="Discover the abstract compositions of 'Abstraction 2019-2021' collection by Annie Rios">
- <meta name="twitter:image" content="https://www.annieabstracts.com/images/social-preview.jpg">
- 
-<title>This Is Abstraction - Annie Rios Gallery Exhibition Lanzarote</title>
-
-<meta name="description" content="'This Is Abstraction' exhibition at Gallery Artisans & Co., Lanzarote (2022-2023). Contemporary abstract works by Spanish-Panamanian artist Annie Rios.">
-
-<!-- Open Graph / Social Media Tags -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="This Is Abstraction - Exhibition">
-<meta property="og:description" content="Gallery exhibition featuring Annie Rios' abstract expressionist works in Lanzarote, Spain.">
-<meta property="og:url" content="https://www.annieabstracts.com/thisisabstraction/">
-<meta property="og:image" content="https://www.annieabstracts.com/images/social-preview.jpg">
- 
- 
-
- <!-- Social Media Icons (Font Awesome) -->
- 
-
- 
- 
- 
- <!-- Stylesheets -->
- <link rel="stylesheet" href="This-Is-Abstraction.css"/>  
- 
- 
- <!-- GSAP (Loaded once via CDN) -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
- <script src="This-is-Abstraction.js" defer></script>
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
- 
- <!-- Primary Header -->
- <header class="custom-header">
-   <div class="header-container">
-     <div class="header-left">
-       <a href="/">
-         <h1 data-i18n="header_title">Annie Rios</h1>
-       </a>
-     </div>
-     <div class="header-extras">
-       <div class="menu-option" data-i18n="menu_text">Menu</div>
-       <div class="language-switcher">
-         <span class="lang-option active" data-lang="en">En</span>
-         <span class="lang-separator">|</span>
-         <span class="lang-option" data-lang="es">Es</span>
-       </div>
-     </div>
-   </div>
- </header>
-
- <!-- Fullscreen Menu Overlay -->
- <div class="fullscreen-menu">
-   <div class="menu-items">
-     <div class="menu-item">
-       <a href="/collections/" class="custom-link" data-i18n="menu_collections">Collections</a>
-     </div>
-     <hr />
-     <div class="menu-item">
-       <a href="/about/" class="custom-link" data-i18n="menu_about">About</a>
-     </div>
-     <hr />
-     <div class="menu-item">
-       <a href="/studio/" class="custom-link" data-i18n="menu_studio">The Studio</a>
-     </div>
-   </div>
- </div>
-
- <!-- Hero Section with Image Background -->
-<section class="hero">
-   <img src="../images/sailingspirit1.jpg" alt="Background" class="hero-background" />
-   <div class="content-wrapper">
-     <div class="text-container">
-       <h1 class="title1">
-         <span data-i18n="hero_title">This isAbstraction</span>
-         <br>
-         <span class="italic" data-i18n="hero_subtitle">Collection</span>
-       </h1>
-       <p class="subtitle1" data-i18n="hero_year">2019-2021</p>
-     </div>
-   </div>
-   
-   <!-- Scroll-Down Indicator -->
-   <div class="scroll-indicator-hero">
-     <a href="#gallery" class="scroll-link" aria-label="Scroll down to the gallery">
-       <span class="scroll-text">Scroll</span>
-       <span class="scroll-arrow">â†“</span>
-     </a>
-   </div>
-</section>
-
- <!-- GALLERY GRID WITH 4 ARTWORKS -->
- <section id="gallery" class="collection-grid">
-   <!-- Artwork 1: De Donde Venimos -->
-   <div class="artwork-item" data-artwork-id="de-donde-venimos">
-     <div class="artwork-image-container">
-       <img src="../images/IMG_3415.jpg" alt="De Donde Venimos" loading="lazy" class="artwork-image" />
-     </div>
-     <div class="artwork-info">
-       <h3 class="artwork-title">De Donde Venimos</h3>
-       <div class="artwork-details">
-         <div>2023</div>
-         <div>Acrylic on canvas, oak wood frame</div>
-         <div>100 x 70 cm</div>
-       </div>
-       <button class="enquire-button">Enquire</button>
-     </div>
-   </div>
-
-   <!-- Artwork 2: Gold Mine -->
-   <div class="artwork-item" data-artwork-id="gold-mine">
-     <div class="artwork-image-container">
-       <img src="../images/IMG_6623.JPG" alt="Gold Mine" loading="lazy" class="artwork-image" />
-     </div>
-     <div class="artwork-info">
-       <h3 class="artwork-title">Gold Mine</h3>
-       <div class="artwork-details">
-         <div>2023</div>
-         <div>Acrylic on paper</div>
-         <div>180 x 80 cm</div>
-       </div>
-       <button class="enquire-button">Enquire</button>
-     </div>
-   </div>
-
-   <!-- Artwork 3: Sailing Spirit -->
-   <div class="artwork-item" data-artwork-id="sailing-spirit">
-     <div class="artwork-image-container">
-       <img src="../images/sailingspirit.jpg" alt="Sailing Spirit" loading="lazy" class="artwork-image" />
-     </div>
-     <div class="artwork-info">
-       <h3 class="artwork-title">Sailing Spirit</h3>
-       <div class="artwork-details">
-         <div>2023</div>
-         <div>Acrylic on canvas, oak wood frame</div>
-         <div>70 x 40 cm</div>
-       </div>
-       <button class="enquire-button">Enquire</button>
-     </div>
-   </div>
-
-   <!-- Artwork 4: Warm Heart -->
-   <div class="artwork-item" data-artwork-id="warm-heart">
-     <div class="artwork-image-container">
-       <img src="../images/WhatsApp Image 2022-09-23 at 6.31.27 PM.jpg" alt="Warm Heart" loading="lazy" class="artwork-image" />
-     </div>
-     <div class="artwork-info">
-       <h3 class="artwork-title">Warm Heart</h3>
-       <div class="artwork-details">
-         <div>2023</div>
-         <div>Acrylic on canvas, oak wood frame</div>
-         <div>100 x 88 cm</div>
-       </div>
-       <button class="enquire-button">Enquire</button>
-     </div>
-   </div>
- </section>
-
- <!-- Footer -->
- <footer>
-   <p>&copy; 2025 Annie Rios. All rights reserved.</p>
- </footer>
-
- <!-- ARTWORK MODAL WITH DETAIL IMAGES IN RIGHT PANEL -->
-<div id="artwork-modal" class="artwork-modal">
-  <div class="modal-overlay"></div>
-  <div class="modal-container">
-    <!-- Image Viewer -->
-    <div class="image-viewer">
-      <img id="modal-image" src="" alt="" class="modal-image">
-    </div>
-    
-    <!-- Details Panel -->
-    <div class="details-panel">
-      <div class="details-content">
-        <h2 id="modal-artist" class="artist-name">Annie Rios</h2>
-        <div class="title-year">
-          <span id="modal-title" class="artwork-title"></span>, 
-          <span id="modal-year" class="artwork-year"></span>
-        </div>
-        <div id="modal-medium" class="artwork-medium"></div>
-        <div id="modal-dimensions" class="artwork-dimensions"></div>
-        <div id="modal-description" class="artwork-description"></div>
-        
-        <!-- Detail Images Container - Moved to Right Panel -->
-        <div id="detail-images-container" class="detail-images-container" style="display: none;">
-          <div class="detail-images-label">Detail Views</div>
-          <div class="detail-images-grid">
-            <!-- Detail images will be dynamically inserted here -->
-          </div>
-        </div>
-        
-        <!-- Action Buttons -->
-        <div class="action-buttons">
-          <button class="inquire-btn">Inquire</button>
-          
-          <!-- Share Button -->
-          <div class="social_sharing_wrap not-prose clearwithin">
-            <div class="link share_link popup_vertical_link retain_dropdown_dom_position" data-link-type="share_link">
-                <a href="#" role="button" aria-haspopup="true" aria-expanded="false" 
-                   class="focustrap-focusable focustrap-item share-btn" tabindex="0">Share</a>
-                
-                <div id="social_sharing" class="social_sharing popup_links_parent">
-                    <div id="relative_social_sharing" class="relative_social_sharing">
-                        <div id="social_sharing_links" class="social_sharing_links popup_vertical addthis_toolbox popup_links dropdown_closed">
-                            <ul>
-                                <li class="social_links_item">
-                                    <a href="#" target="_blank" class="addthis_button_facebook" tabindex="0">
-                                        <span class="add_this_social_media_icon facebook"></span>Facebook
-                                    </a>
-                                </li>
-                                <li class="social_links_item">
-                                    <a href="#" target="_blank" class="addthis_button_x" tabindex="0">
-                                        <span class="add_this_social_media_icon x"></span>X
-                                    </a>
-                                </li>
-                                <li class="social_links_item">
-                                    <a href="#" target="_blank" class="addthis_button_pinterest_share" tabindex="0">
-                                        <span class="add_this_social_media_icon pinterest"></span>Pinterest
-                                    </a>
-                                </li>
-                                <li class="social_links_item">
-                                    <a href="#" target="_blank" class="addthis_button_email" tabindex="0">
-                                        <span class="add_this_social_media_icon email"></span>Email
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
+  <div class="sheet">
+    <aside class="rail">
+      <a class="name" href="/">Annie Ríos</a>
+      <nav>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/itinerary/">Itinerary</a>
+        <a href="/about/">Annie</a>
+        <a href="/inquire/">Inquire</a>
+      </nav>
+            <div class="langs">
+        <button type="button" data-set-lang="en" aria-pressed="true">En</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" data-set-lang="es">Es</button>
       </div>
-    </div>
-    
-    <!-- Navigation & Close -->
-    <button class="modal-close">&times;</button>
-    <button class="nav-btn prev-btn">â€¹</button>
-    <button class="nav-btn next-btn">â€º</button>
+    </aside>
+    <main>
+      <header class="series-head">
+        <h1 data-lang="en">This is Abstraction</h1>
+        <h1 data-lang="es">Abstracción</h1>
+        <p>2019–2022</p>
+      </header>
+      <article class="hang" id="de-donde-venimos">
+        <picture><source type="image/webp" srcset="/images/IMG_3415.webp"><img src="/images/IMG_3415.jpg" alt="De Donde Venimos" width="2352" height="1568"></picture>
+        <div class="caption">
+          <em data-lang="en">De Donde Venimos</em>
+          <span class="line">2023; Acrylic on canvas, oak wood frame; 100 × 70 cm</span>
+          <a class="ask" href="/inquire/?work=De Donde Venimos">Inquire</a>
+          <div class="thumbs"><img src="/images/IMG_3470 (1).jpg" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="hang" id="gold-mine">
+        <picture><source type="image/webp" srcset="/images/IMG_6623.webp"><img src="/images/IMG_6623.JPG" alt="Gold Mine" width="2145" height="1123" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">Gold Mine</em><em data-lang="es">Mina de Oro</em>
+          <span class="line">2023; Acrylic on paper; 180 × 80 cm</span>
+          <a class="ask" href="/inquire/?work=Gold Mine">Inquire</a>
+          <div class="thumbs"><img src="/images/IMG_6580.jpg" alt="" loading="lazy"><img src="/images/IMG_6594.jpg" alt="" loading="lazy"><img src="/images/IMG_6599.jpg" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="hang" id="sailing-spirit">
+        <picture><source type="image/webp" srcset="/images/sailingspirit.webp"><img src="/images/sailingspirit.jpg" alt="Sailing Spirit" width="1568" height="2051" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">Sailing Spirit</em><em data-lang="es">Espíritu Navegante</em>
+          <span class="line">2023; Acrylic on canvas, oak wood frame; 70 × 40 cm</span>
+          <a class="ask" href="/inquire/?work=Sailing Spirit">Inquire</a>
+          <div class="thumbs"><img src="/images/sailingspirit1.jpg" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="hang" id="warm-heart">
+        <picture><source type="image/webp" srcset="/images/WhatsApp Image 2022-09-23 at 6.31.27 PM.webp"><img src="/images/WhatsApp Image 2022-09-23 at 6.31.27 PM.jpg" alt="Warm Heart" width="1600" height="1200" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">Warm Heart</em><em data-lang="es">Corazón Cálido</em>
+          <span class="line">2023; Acrylic on canvas, oak wood frame; 100 × 88 cm</span>
+          <a class="ask" href="/inquire/?work=Warm Heart">Inquire</a>
+          <div class="thumbs"><img src="/images/IMG_2601.jpg" alt="" loading="lazy"><img src="/images/IMG_2601 (1).jpg" alt="" loading="lazy"></div>
+        </div>
+      </article>
+    </main>
   </div>
-</div>
-
- <!-- Inquiry Form Modal -->
- <div id="inquiry-modal" class="inquiry-modal">
-   <div class="modal-overlay"></div>
-   <div class="modal-container inquiry-container">
-     <div class="modal-content">
-       <div class="inquiry-form-wrapper">
-         <h2 id="inquiry-form-header">Enquiry form</h2>
-         
-         <!-- Artwork Preview -->
-         <div id="inquiry-artwork-preview" class="inquiry-artwork-preview">
-           <div class="preview-content">
-             <div class="preview-image">
-               <img id="inquiry-preview-img" src="" alt="">
-             </div>
-             <div class="preview-details">
-               <div id="inquiry-preview-artist" class="artist">Annie Rios</div>
-               <div class="title-year">
-                 <span id="inquiry-preview-title" class="title"></span>, 
-                 <span id="inquiry-preview-year" class="year"></span>
-               </div>
-               <div id="inquiry-preview-medium" class="medium"></div>
-               <div id="inquiry-preview-dimensions" class="dimensions"></div>
-             </div>
-           </div>
-         </div>
-         
-         <!-- Contact Form -->
-         <form id="inquiry-form" class="inquiry-form">
-           <div class="error-row">Please fill in the fields marked with an asterisk</div>
-           
-           <div class="form-row required">
-             <label for="inquiry-name">Name *</label>
-             <input id="inquiry-name" name="name" type="text" required autocomplete="name">
-           </div>
-           
-           <div class="form-row required">
-             <label for="inquiry-email">Email *</label>
-             <input id="inquiry-email" name="email" type="email" required autocomplete="email">
-           </div>
-           
-           <div class="form-row">
-             <label for="inquiry-phone">Phone</label>
-             <input id="inquiry-phone" name="phone" type="tel" autocomplete="tel">
-           </div>
-           
-           <div class="form-row">
-             <label for="inquiry-message">Message</label>
-             <textarea id="inquiry-message" name="message" rows="4" placeholder="Your message about this artwork..."></textarea>
-           </div>
-           
-           <div class="form-row submit-row">
-             <button type="submit" class="submit-button">Send enquiry</button>
-           </div>
-           
-           <div class="privacy-policy">
-             <div class="asterisk">
-               <p>* denotes required fields</p>
-             </div>
-             <p>In order to respond to your enquiry, we will process the personal data you have supplied in accordance with our privacy policy.</p>
-           </div>
-         </form>
-       </div>
-       
-       <button class="modal-close">&times;</button>
-     </div>
-   </div>
- </div>
-
-<script>
-// Artwork data for the modal functionality
-const artworkData = {
-  "de-donde-venimos": {
-    title: "De Donde Venimos",
-    year: "2023",
-    medium: "Acrylic on canvas, oak wood frame",
-    dimensions: "100 x 70 cm",
-    description: "",
-    mainImage: "../images/IMG_3415.jpg",
-    detailImages: [
-      "../images/IMG_3415.jpg",
-      "../images/IMG_3470 (1).jpg"
-    ]
-  },
-  "gold-mine": {
-    title: "Gold Mine",
-    year: "2023",
-    medium: "Acrylic on paper",
-    dimensions: "180 x 80 cm",
-    description: "",
-    mainImage: "../images/IMG_6623.JPG",
-    detailImages: [
-      "../images/IMG_6623.JPG",
-      "../images/IMG_6580.JPG",
-      "../images/IMG_6594.JPG",
-      "../images/IMG_6599.JPG"
-    ]
-  },
-  "sailing-spirit": {
-    title: "Sailing Spirit",
-    year: "2023",
-    medium: "Acrylic on canvas, oak wood frame",
-    dimensions: "70 x 40 cm",
-    description: "",
-    mainImage: "../images/sailingspirit.jpg",
-    detailImages: [
-      "../images/sailingspirit.jpg",
-      "../images/sailingspirit1.jpg"
-    ]
-  },
-  "warm-heart": {
-    title: "Warm Heart",
-    year: "2023",
-    medium: "Acrylic on canvas, oak wood frame",
-    dimensions: "100 x 88 cm",
-    description: "",
-    mainImage: "../images/WhatsApp Image 2022-09-23 at 6.31.27 PM.jpg",
-    detailImages: [
-      "../images/WhatsApp Image 2022-09-23 at 6.31.27 PM.jpg",
-      "../images/IMG_2601.jpg",
-      "../images/IMG_2601 (1).jpg"
-    ]
-  }
-};
-</script>
-
+  <script src="/js/site.js"></script>
 </body>
 </html>

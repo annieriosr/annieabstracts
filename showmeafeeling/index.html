@@ -1,477 +1,110 @@
-﻿<!DOCTYPE html>
-<!--
-  Annie Rios
-  Design by Annie Rios
-  Code by Annie Rios
-  @annieabstracts
-  Â© 2025
--->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Show Me a Feeling | Annie Ríos</title>
+  <meta name="description" content="Annie Ríos' first solo exhibition Show Me a Feeling at Art & Sushi, Madrid (Feb–Jun 2024).">
+  <link rel="canonical" href="https://www.annieabstracts.com/showmeafeeling">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <!-- Responsive viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO / Metadata -->
-  
-  <meta name="description" content="Explore Annie Rios's collection 'Show Me a Feeling,' where abstract expressionism meets emotional depth.">
-  <meta name="keywords" content="Annie Rios, abstract art, modern art, expressionism, contemporary art, Show Me a Feeling">
-  <meta name="author" content="Annie Rios">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.annieabstracts.com/show-me-a-feeling">
-
-  <!-- Favicon -->
-  
-
-  <!-- Format Detection -->
-  <meta name="format-detection" content="date=no">
-  <meta name="format-detection" content="email=no">
-  <meta name="format-detection" content="address=no">
-  <meta name="format-detection" content="telephone=no">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Show Me a Feeling - Annie Rios">
-  <meta name="twitter:description" content="Discover the emotional depth of 'Show Me a Feeling' collection by Annie Rios.">
-  <meta name="twitter:image" content="https://www.annieabstracts.com/images/social-preview.jpg">
-
-  <title>Show Me a Feeling - Annie Rios Solo Exhibition Madrid 2024</title>
-
-<meta name="description" content="Annie Rios' first solo exhibition 'Show Me a Feeling' at Art & Sushi, Madrid (Feb-Jun 2024). Abstract expressionist works exploring emotion and refraction.">
-
-<!-- Open Graph / Social Media Tags -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Show Me a Feeling - Solo Exhibition">
-<meta property="og:description" content="First solo exhibition by Annie Rios featuring abstract expressionist works exploring light and emotion.">
-<meta property="og:url" content="https://www.annieabstracts.com/showmeafeeling/">
-<meta property="og:image" content="https://www.annieabstracts.com/images/social-preview.jpg">
-
-
-
-  <!-- Social Media Icons (Font Awesome) -->
-  
-
-  <!-- Page Title -->
-  <title>Show Me a Feeling | Annie Rios</title>
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="Show-Me-A-Feeling.css"/>  
-  <!-- Mobile-specific styles loaded only when screen width is 600px or less -->
-  
-  
-
-  <!-- GSAP (Loaded once via CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  <script src="Show-Me-A-Feeling.js" defer></script>
-
-  <!-- Removed the mobile redirection script to allow this same page to adapt responsively -->
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <!-- Primary Header -->
-  <header class="custom-header">
-    <div class="header-container">
-      <div class="header-left">
-        <a href="/">
-          <h1 data-i18n="header_title">Annie Rios</h1>
-        </a>
+  <div class="sheet">
+    <aside class="rail">
+      <a class="name" href="/">Annie Ríos</a>
+      <nav>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/itinerary/">Itinerary</a>
+        <a href="/about/">Annie</a>
+        <a href="/inquire/">Inquire</a>
+      </nav>
+            <div class="langs">
+        <button type="button" data-set-lang="en" aria-pressed="true">En</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" data-set-lang="es">Es</button>
       </div>
-      <div class="header-extras">
-        <div class="menu-option" data-i18n="menu_text">Menu</div>
-        <div class="language-switcher">
-          <span class="lang-option active" data-lang="en">En</span>
-          <span class="lang-separator">|</span>
-          <span class="lang-option" data-lang="es">Es</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Fullscreen Menu Overlay -->
-  <div class="fullscreen-menu">
-    <div class="menu-items">
-      <div class="menu-item">
-        <a href="/collections/" class="custom-link" data-i18n="menu_collections">Collections</a>
-      </div>                  
-      <hr>
-      <div class="menu-item">
-        <a href="/about/" class="custom-link" data-i18n="menu_about">About</a>
-      </div>
-      <hr>
-      <div class="menu-item">
-        <a href="/studio/" class="custom-link" data-i18n="menu_studio">The Studio</a>
-      </div>                  
-    </div>
-  </div>
-
-  <!-- Hero Section with Image Background -->
-  <section class="hero">
-    <img src="../images/IMG_3435.jpg" alt="Background" class="hero-background" />
-    <div class="content-wrapper">
-      <div class="text-container">
-        <h1 class="title1">
-          <span data-i18n="hero_title">Show Me A Feeling</span>
-          <br>
-          <span class="italic" data-i18n="hero_subtitle">Collection</span>
-        </h1>
-        <p class="subtitle1" data-i18n="hero_year">2023-2024</p>
-      </div>
-    </div>
-    
-    <!-- Scroll-Down Indicator -->
-    <div class="scroll-indicator-hero">
-      <a href="#gallery" class="scroll-link" aria-label="Scroll down to the gallery">
-        <span class="scroll-text">Scroll</span>
-        <span class="scroll-arrow">â†“</span>
-      </a>
-    </div>
-  </section>
-
-  
-  
-<!-- UPDATED GALLERY GRID WITH ALL ARTWORKS AND DETAIL PHOTOS -->
-<section id="gallery" class="collection-grid">
-  <!-- Artwork 1: Red Thread -->
-  <div class="artwork-item" data-artwork-id="red-thread">
-    <div class="artwork-image-container">
-      <img src="../images/09B53636-C040-4AA6-B269-FE1BE53BD0D2.JPG" alt="Red Thread" loading="lazy" class="artwork-image" />
-    </div>
-    <div class="artwork-info">
-      <h3 class="artwork-title">Red Thread</h3>
-      <div class="artwork-details">
-        <div>2023-2024</div>
-        <div>Acrylic and mixed media on canvas</div>
-      </div>
-      <button class="enquire-button">Enquire</button>
-    </div>
-  </div>
-
-  <!-- Artwork 2: Casa Amarilla -->
-  <div class="artwork-item" data-artwork-id="casa-amarilla">
-    <div class="artwork-image-container">
-      <img src="../images/19-DSC03381.jpg" alt="Casa Amarilla" loading="lazy" class="artwork-image" />
-    </div>
-    <div class="artwork-info">
-      <h3 class="artwork-title">Casa Amarilla</h3>
-      <div class="artwork-details">
-        <div>2023-2024</div>
-        <div>Acrylic and mixed media on canvas</div>
-      </div>
-      <button class="enquire-button">Enquire</button>
-    </div>
-  </div>
-
-  <!-- Artwork 3: El Ocaso -->
-  <div class="artwork-item" data-artwork-id="el-ocaso">
-    <div class="artwork-image-container">
-      <img src="../images/3-DSC03352.jpg" alt="El Ocaso" loading="lazy" class="artwork-image" />
-    </div>
-    <div class="artwork-info">
-      <h3 class="artwork-title">El Ocaso</h3>
-      <div class="artwork-details">
-        <div>2023-2024</div>
-        <div>Acrylic and mixed media on canvas</div>
-      </div>
-      <button class="enquire-button">Enquire</button>
-    </div>
-  </div>
-
-  <!-- Artwork 4: Blue Mosaics -->
-  <div class="artwork-item" data-artwork-id="blue-mosaics">
-    <div class="artwork-image-container">
-      <img src="../images/11-DSC03364.jpg" alt="Blue Mosaics" loading="lazy" class="artwork-image" />
-    </div>
-    <div class="artwork-info">
-      <h3 class="artwork-title">Blue Mosaics</h3>
-      <div class="artwork-details">
-        <div>2023-2024</div>
-        <div>Acrylic and mixed media on canvas</div>
-      </div>
-      <button class="enquire-button">Enquire</button>
-    </div>
-  </div>
-
-  <!-- Artwork 5: Final del Verano -->
-  <div class="artwork-item" data-artwork-id="final-del-verano">
-    <div class="artwork-image-container">
-      <img src="../images/7-DSC03359.jpg" alt="Final del Verano" loading="lazy" class="artwork-image" />
-    </div>
-    <div class="artwork-info">
-      <h3 class="artwork-title">Final del Verano</h3>
-      <div class="artwork-details">
-        <div>2023-2024</div>
-        <div>Acrylic and mixed media on canvas</div>
-      </div>
-      <button class="enquire-button">Enquire</button>
-    </div>
-  </div>
-
-  <!-- Artwork 6: Sailing Spirit: Sinking Ship -->
-  <div class="artwork-item" data-artwork-id="sailing-spirit">
-    <div class="artwork-image-container">
-      <img src="../images/IMG_1500.JPG" alt="Sinking Ship" loading="lazy" class="artwork-image" />
-    </div>
-    <div class="artwork-info">
-      <h3 class="artwork-title">Sinking Ship</h3>
-      <div class="artwork-details">
-        <div>2025</div>
-        <div>Acrylic on canvas, pine wood frame</div>
-        <div>40 x 30 cm</div>
-      </div>
-      <button class="enquire-button">Enquire</button>
-    </div>
-  </div>
-
-  <!-- Artwork 7: Visual Gallery -->
-  <div class="artwork-item" data-artwork-id="visual-gallery">
-    <div class="artwork-image-container">
-      <img src="../images/9-DSC03362.jpg" alt="Visual Gallery" loading="lazy" class="artwork-image" />
-    </div>
-    <div class="artwork-info">
-      <h3 class="artwork-title">Visual Gallery</h3>
-      <div class="artwork-details">
-        <div>2024</div>
-        <div>Acrylic on canvas, oak wood frame</div>
-        <div>90 x 90 cm</div>
-      </div>
-      <button class="enquire-button">Enquire</button>
-    </div>
-  </div>
-
-  <!-- Artwork 8: Amar Ciegamente -->
-  <div class="artwork-item" data-artwork-id="amar-ciegamente">
-    <div class="artwork-image-container">
-      <img src="../images/1-DSC03347.jpg" alt="Amar Ciegamente" loading="lazy" class="artwork-image" />
-    </div>
-    <div class="artwork-info">
-      <h3 class="artwork-title">Amar Ciegamente</h3>
-      <div class="artwork-details">
-        <div>2024</div>
-        <div>Acrylic on canvas, oak wood frame</div>
-        <div>90 x 90 cm</div>
-      </div>
-      <button class="enquire-button">Enquire</button>
-    </div>
-  </div>
-
-  <!-- UPDATED ARTWORK MODAL WITH DETAIL IMAGES IN RIGHT PANEL -->
-<div id="artwork-modal" class="artwork-modal">
-  <div class="modal-overlay"></div>
-  <div class="modal-container">
-    <!-- Image Viewer -->
-    <div class="image-viewer">
-      <img id="modal-image" src="" alt="" class="modal-image">
-    </div>
-    
-    <!-- Details Panel -->
-    <div class="details-panel">
-      <div class="details-content">
-        <h2 id="modal-artist" class="artist-name">Annie Rios</h2>
-        <div class="title-year">
-          <span id="modal-title" class="artwork-title"></span>, 
-          <span id="modal-year" class="artwork-year"></span>
-        </div>
-        <div id="modal-medium" class="artwork-medium"></div>
-        <div id="modal-dimensions" class="artwork-dimensions"></div>
-        <div id="modal-description" class="artwork-description"></div>
-        
-        <!-- Detail Images Container - Sailing Spirit: Sinking Ship -->
-        <div id="detail-images-sailing-spirit" class="detail-images-container" style="display: none;">
-          <div class="detail-images-label">Detail Views</div>
-          <div class="detail-images-grid">
-            <img src="" alt="Main view" class="detail-image active" data-full-image="" id="main-detail-image-sailing">
-            <img src="../images/IMG_1510.jpg" alt="Sailing Spirit detail 1" class="detail-image" data-full-image="../images/IMG_1510.jpg">
-            <img src="../images/IMG_1509.jpg" alt="Sailing Spirit detail 2" class="detail-image" data-full-image="../images/IMG_1509.jpg">
-            <img src="../images/IMG_1496.JPG" alt="Sailing Spirit detail 3" class="detail-image" data-full-image="../images/IMG_1496.JPG">
-          </div>
-        </div>
-
-        <!-- Detail Images Container - El Ocaso -->
-        <div id="detail-images-el-ocaso" class="detail-images-container" style="display: none;">
-          <div class="detail-images-label">Detail Views</div>
-          <div class="detail-images-grid">
-            <img src="" alt="Main view" class="detail-image active" data-full-image="" id="main-detail-image-elocaso">
-            <img src="../images/IMG_1543.jpg" alt="El Ocaso detail 1" class="detail-image" data-full-image="../images/IMG_1543.jpg">
-            <img src="../images/IMG_1540.jpg" alt="El Ocaso detail 2" class="detail-image" data-full-image="../images/IMG_1540.jpg">
-            <img src="../images/IMG_1538.jpg" alt="El Ocaso detail 3" class="detail-image" data-full-image="../images/IMG_1538.jpg">
-          </div>
-        </div>
-
-        <!-- Detail Images Container - Casa Amarilla -->
-        <div id="detail-images-casa-amarilla" class="detail-images-container" style="display: none;">
-          <div class="detail-images-label">Detail Views</div>
-          <div class="detail-images-grid">
-            <img src="" alt="Main view" class="detail-image active" data-full-image="" id="main-detail-image-casa">
-            <img src="../images/IMG_1484.JPG" alt="Casa Amarilla detail 1" class="detail-image" data-full-image="../images/IMG_1484.JPG">
-            <img src="../images/IMG_0232 2.JPG" alt="Casa Amarilla detail 2" class="detail-image" data-full-image="../images/IMG_0232 2.JPG">
-          </div>
-        </div>
-
-        <!-- Detail Images Container - Abstraction 01 -->
-        <div id="detail-images-abstraction-01" class="detail-images-container" style="display: none;">
-          <div class="detail-images-label">Detail Views</div>
-          <div class="detail-images-grid">
-            <img src="" alt="Main view" class="detail-image active" data-full-image="" id="main-detail-image-abstraction01">
-            <img src="../images/IMG_1470.JPG" alt="Abstraction 01 detail 1" class="detail-image" data-full-image="../images/IMG_1470.JPG">
-            <img src="../images/IMG_1467.JPG" alt="Abstraction 01 detail 2" class="detail-image" data-full-image="../images/IMG_1467.JPG">
-            <img src="../images/IMG_1472.JPG" alt="Abstraction 01 detail 3" class="detail-image" data-full-image="../images/IMG_1472.JPG">
-          </div>
-        </div>
-
-        <!-- Detail Images Container - Visual Gallery -->
-        <div id="detail-images-visual-gallery" class="detail-images-container" style="display: none;">
-          <div class="detail-images-label">Detail Views</div>
-          <div class="detail-images-grid">
-            <img src="" alt="Main view" class="detail-image active" data-full-image="" id="main-detail-image-visual">
-            <img src="../images/IMG_1439.jpg" alt="Visual Gallery detail 1" class="detail-image" data-full-image="../images/IMG_1439.jpg">
-          </div>
-        </div>
-
-        <!-- Detail Images Container - Amar Ciegamente -->
-        <div id="detail-images-amar-ciegamente" class="detail-images-container" style="display: none;">
-          <div class="detail-images-label">Detail Views</div>
-          <div class="detail-images-grid">
-            <img src="" alt="Main view" class="detail-image active" data-full-image="" id="main-detail-image-amar">
-            <img src="../images/IMG_1402.jpg" alt="Amar Ciegamente detail 1" class="detail-image" data-full-image="../images/IMG_1402.jpg">
-            <img src="../images/IMG_1398.jpg" alt="Amar Ciegamente detail 2" class="detail-image" data-full-image="../images/IMG_1398.jpg">
-          </div>
-        </div>
-
-        <!-- Detail Images Container - Final del Verano -->
-        <div id="detail-images-final-del-verano" class="detail-images-container" style="display: none;">
-          <div class="detail-images-label">Detail Views</div>
-          <div class="detail-images-grid">
-            <img src="" alt="Main view" class="detail-image active" data-full-image="" id="main-detail-image-final">
-            <img src="../images/IMG_1383.jpg" alt="Final del Verano detail 1" class="detail-image" data-full-image="../images/IMG_1383.jpg">
-            <img src="../images/IMG_1383 (1).JPG" alt="Final del Verano detail 2" class="detail-image" data-full-image="../images/IMG_1383 (1).JPG">
-            <img src="../images/IMG_1381.jpg" alt="Final del Verano detail 3" class="detail-image" data-full-image="../images/IMG_1381.jpg">
-          </div>
-        </div>
-        
-        <!-- Action Buttons -->
-        <div class="action-buttons">
-          <button class="inquire-btn">Inquire</button>
+    </aside>
+    <main>
+      <header class="series-head">
+        <h1 data-lang="en">Show Me a Feeling</h1>
+        <h1 data-lang="es">Muéstrame un Sentimiento</h1>
+        <p>2023–2024</p>
+      </header>
+      <article class="hang" id="red-thread">
+        <picture><source type="image/webp" srcset="/images/09B53636-C040-4AA6-B269-FE1BE53BD0D2.webp"><img src="/images/09B53636-C040-4AA6-B269-FE1BE53BD0D2.JPG" alt="Red Thread" width="1440" height="1800"></picture>
+        <div class="caption">
+          <em data-lang="en">Red Thread</em><em data-lang="es">Hilo Rojo</em>
+          <span class="line">2023–2024; Acrylic and mixed media on canvas</span>
+          <a class="ask" href="/inquire/?work=Red Thread">Inquire</a>
           
-          <!-- Share Button -->
-          <div class="social_sharing_wrap not-prose clearwithin">
-            <div class="link share_link popup_vertical_link retain_dropdown_dom_position" data-link-type="share_link">
-                <a href="#" role="button" aria-haspopup="true" aria-expanded="false" 
-                   class="focustrap-focusable focustrap-item share-btn" tabindex="0">Share</a>
-                
-                <div id="social_sharing" class="social_sharing popup_links_parent">
-                    <div id="relative_social_sharing" class="relative_social_sharing">
-                        <div id="social_sharing_links" class="social_sharing_links popup_vertical addthis_toolbox popup_links dropdown_closed">
-                            <ul>
-                                <li class="social_links_item">
-                                    <a href="#" target="_blank" class="addthis_button_facebook" tabindex="0">
-                                        <span class="add_this_social_media_icon facebook"></span>Facebook
-                                    </a>
-                                </li>
-                                <li class="social_links_item">
-                                    <a href="#" target="_blank" class="addthis_button_x" tabindex="0">
-                                        <span class="add_this_social_media_icon x"></span>X
-                                    </a>
-                                </li>
-                                <li class="social_links_item">
-                                    <a href="#" target="_blank" class="addthis_button_pinterest_share" tabindex="0">
-                                        <span class="add_this_social_media_icon pinterest"></span>Pinterest
-                                    </a>
-                                </li>
-                                <li class="social_links_item">
-                                    <a href="#" target="_blank" class="addthis_button_email" tabindex="0">
-                                        <span class="add_this_social_media_icon email"></span>Email
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- Navigation & Close -->
-    <button class="modal-close">&times;</button>
-    <button class="nav-btn prev-btn">â€¹</button>
-    <button class="nav-btn next-btn">â€º</button>
-  </div>
-</div>
-
-  <!-- Inquiry Form Modal -->
-  <div id="inquiry-modal" class="inquiry-modal">
-    <div class="modal-overlay"></div>
-    <div class="modal-container inquiry-container">
-      <div class="modal-content">
-        <div class="inquiry-form-wrapper">
-          <h2 id="inquiry-form-header">Enquiry form</h2>
-          
-          <!-- Artwork Preview -->
-          <div id="inquiry-artwork-preview" class="inquiry-artwork-preview">
-            <div class="preview-content">
-              <div class="preview-image">
-                <img id="inquiry-preview-img" src="" alt="">
-              </div>
-              <div class="preview-details">
-                <div id="inquiry-preview-artist" class="artist">Annie Rios</div>
-                <div class="title-year">
-                  <span id="inquiry-preview-title" class="title"></span>, 
-                  <span id="inquiry-preview-year" class="year"></span>
-                </div>
-                <div id="inquiry-preview-medium" class="medium"></div>
-                <div id="inquiry-preview-dimensions" class="dimensions"></div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Contact Form -->
-          <form id="inquiry-form" class="inquiry-form">
-            <div class="error-row">Please fill in the fields marked with an asterisk</div>
-            
-            <div class="form-row required">
-              <label for="inquiry-name">Name *</label>
-              <input id="inquiry-name" name="name" type="text" required autocomplete="name">
-            </div>
-            
-            <div class="form-row required">
-              <label for="inquiry-email">Email *</label>
-              <input id="inquiry-email" name="email" type="email" required autocomplete="email">
-            </div>
-            
-            <div class="form-row">
-              <label for="inquiry-phone">Phone</label>
-              <input id="inquiry-phone" name="phone" type="tel" autocomplete="tel">
-            </div>
-            
-            <div class="form-row">
-              <label for="inquiry-message">Message</label>
-              <textarea id="inquiry-message" name="message" rows="4" placeholder="Your message about this artwork..."></textarea>
-            </div>
-            
-            <div class="form-row submit-row">
-              <button type="submit" class="submit-button">Send enquiry</button>
-            </div>
-            
-            <div class="privacy-policy">
-              <div class="asterisk">
-                <p>* denotes required fields</p>
-              </div>
-              <p>In order to respond to your enquiry, we will process the personal data you have supplied in accordance with our privacy policy.</p>
-            </div>
-          </form>
+      </article>
+      <article class="hang" id="casa-amarilla">
+        <picture><source type="image/webp" srcset="/images/19-DSC03381.webp"><img src="/images/19-DSC03381.jpg" alt="Casa Amarilla" width="3628" height="4787" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">Casa Amarilla</em>
+          <span class="line">2023–2024; Acrylic and mixed media on canvas</span>
+          <a class="ask" href="/inquire/?work=Casa Amarilla">Inquire</a>
+          <div class="thumbs"><img src="/images/IMG_1484.JPG" alt="" loading="lazy"><img src="/images/IMG_0232 2.JPG" alt="" loading="lazy"></div>
         </div>
-        
-        <button class="modal-close">&times;</button>
-      </div>
-    </div>
+      </article>
+      <article class="hang" id="el-ocaso">
+        <picture><source type="image/webp" srcset="/images/3-DSC03352.webp"><img src="/images/3-DSC03352.jpg" alt="El Ocaso" width="3862" height="4465" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">El Ocaso</em>
+          <span class="line">2023–2024; Acrylic and mixed media on canvas</span>
+          <a class="ask" href="/inquire/?work=El Ocaso">Inquire</a>
+          <div class="thumbs"><img src="/images/IMG_1543.jpg" alt="" loading="lazy"><img src="/images/IMG_1540.jpg" alt="" loading="lazy"><img src="/images/IMG_1538.jpg" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="hang" id="blue-mosaics">
+        <picture><source type="image/webp" srcset="/images/11-DSC03364.webp"><img src="/images/11-DSC03364.jpg" alt="Blue Mosaics" width="3454" height="3501" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">Blue Mosaics</em><em data-lang="es">Mosaicos Azules</em>
+          <span class="line">2023–2024; Acrylic and mixed media on canvas</span>
+          <a class="ask" href="/inquire/?work=Blue Mosaics">Inquire</a>
+          
+        </div>
+      </article>
+      <article class="hang" id="final-del-verano">
+        <picture><source type="image/webp" srcset="/images/7-DSC03359.webp"><img src="/images/7-DSC03359.jpg" alt="Final del Verano" width="3679" height="4518" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">Final del Verano</em>
+          <span class="line">2023–2024; Acrylic and mixed media on canvas</span>
+          <a class="ask" href="/inquire/?work=Final del Verano">Inquire</a>
+          <div class="thumbs"><img src="/images/IMG_1383.jpg" alt="" loading="lazy"><img src="/images/IMG_1383 (1).JPG" alt="" loading="lazy"><img src="/images/IMG_1381.jpg" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="hang" id="sinking-ship">
+        <picture><source type="image/webp" srcset="/images/IMG_1500.webp"><img src="/images/IMG_1500.JPG" alt="Sinking Ship" width="3475" height="4187" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">Sinking Ship</em>
+          <span class="line">2025; Acrylic on canvas, pine wood frame; 40 × 30 cm</span>
+          <a class="ask" href="/inquire/?work=Sinking Ship">Inquire</a>
+          <div class="thumbs"><img src="/images/IMG_1510.jpg" alt="" loading="lazy"><img src="/images/IMG_1509.jpg" alt="" loading="lazy"><img src="/images/IMG_1496.JPG" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="hang" id="visual-gallery">
+        <picture><source type="image/webp" srcset="/images/9-DSC03362.webp"><img src="/images/9-DSC03362.jpg" alt="Visual Gallery" width="3730" height="3654" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">Visual Gallery</em>
+          <span class="line">2024; Acrylic on canvas, oak wood frame; 90 × 90 cm</span>
+          <a class="ask" href="/inquire/?work=Visual Gallery">Inquire</a>
+          <div class="thumbs"><img src="/images/IMG_1439.jpg" alt="" loading="lazy"></div>
+        </div>
+      </article>
+      <article class="hang" id="amar-ciegamente">
+        <picture><source type="image/webp" srcset="/images/1-DSC03347.webp"><img src="/images/1-DSC03347.jpg" alt="Amar Ciegamente" width="3310" height="3271" loading="lazy"></picture>
+        <div class="caption">
+          <em data-lang="en">Amar Ciegamente</em>
+          <span class="line">2024; Acrylic on canvas, oak wood frame; 90 × 90 cm</span>
+          <a class="ask" href="/inquire/?work=Amar Ciegamente">Inquire</a>
+          <div class="thumbs"><img src="/images/IMG_1402.jpg" alt="" loading="lazy"><img src="/images/IMG_1398.jpg" alt="" loading="lazy"></div>
+        </div>
+      </article>
+    </main>
   </div>
-
+  <script src="/js/site.js"></script>
 </body>
 </html>
