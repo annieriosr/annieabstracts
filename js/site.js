@@ -149,7 +149,24 @@ function initInquire() {
   });
 }
 
+function applyLang(lang) {
+  const next = lang === "es" ? "es" : "en";
+  document.documentElement.lang = next;
+  localStorage.setItem("language", next);
+  document.querySelectorAll("[data-set-lang]").forEach((btn) => {
+    btn.setAttribute("aria-pressed", btn.getAttribute("data-set-lang") === next ? "true" : "false");
+  });
+}
+
+function initLang() {
+  applyLang(localStorage.getItem("language") || "en");
+  document.querySelectorAll("[data-set-lang]").forEach((btn) => {
+    btn.addEventListener("click", () => applyLang(btn.getAttribute("data-set-lang")));
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initLang();
   initTimeNav();
   initReel();
   initInquire();
