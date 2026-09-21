@@ -4,13 +4,16 @@ Things I could not take from the old site or the August 2026 CV. Nothing here wa
 
 ## Dimensions
 
-These works have no size on the old site. Captions show title, year, and medium only.
+These works have no size on the old site or in `Portfolio_Annie_Rios_Agosto_2026 (2).pdf`. Captions show title, year, and medium only.
 
-- Red Thread
-- Casa Amarilla
-- El Ocaso
 - Blue Mosaics
 - Final del Verano
+
+Sizes added from that catalogue (February 19, 2026):
+
+- Red Thread — 96 × 115 cm; 2023; Acrylic on canvas, oak wood frame
+- El Ocaso — 110 × 92 cm; 2024; Acrylic on canvas, oak wood frame
+- Casa Amarilla — 70 × 40 cm; 2024; Acrylic on canvas, oak wood frame
 
 ## Years
 
@@ -62,9 +65,9 @@ On the English About bio, from the old About HTML:
 
 Itinerary follows `Portfolio_Annie_Rios_Agosto_2026 (1).pdf`.
 
-**Representación / Galería Habitante, 2026** is not in that PDF. It is on your May 2026 CV and was already on the redesigned About page. I put it on Itinerary. Tell me if it should come off.
+**Representación / Galería Habitante, 2026** is confirmed.
 
-The August PDF lists **ALL THE WAYS WE ARE HUMANS / BoConcept as 2026**. The May CV lists it as 2023. I used 2026.
+**ALL THE WAYS WE ARE HUMANS** was shown at BoConcept, Panamá.
 
 JUANNIO is under **Logros destacados**, not as its own exhibition, matching the August PDF. Museo Miraflores (Mayo 2026) is the group-show line for *Cost of Love*.
 
@@ -78,4 +81,4 @@ Home reel images have empty alt (decorative, matching the live redesign).
 
 ## Phone number
 
-The CV lists **+507 63578064**. It is now on Itinerary. Say if you want it off the public page.
+Public contact is **+34 622 907 643 (WhatsApp)**. The Panama number from the earlier CV is no longer on the site.

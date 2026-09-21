@@ -279,7 +279,8 @@ def build_itinerary():
           <h1>Annie Ríos</h1>
           <p>b. 2002, Ciudad de Panamá, Panamá</p>
           <p>Vive y trabaja en Panamá</p>
-          <p><a href="mailto:annieabstracts@gmail.com">annieabstracts@gmail.com</a> · +507 63578064</p>
+          <p><a href="mailto:annieabstracts@gmail.com">annieabstracts@gmail.com</a></p>
+          <p><a href="https://wa.me/34622907643">+34 622 907 643 WhatsApp</a></p>
           <p><a href="https://www.instagram.com/annieabstracts">Instagram</a></p>
         </div>
 """
@@ -344,6 +345,7 @@ def build_inquire():
     body = f"""      <div class="door">
         <p class="lead">Institutions, curators, collectors</p>
         <a class="mail" href="mailto:annieabstracts@gmail.com">annieabstracts@gmail.com</a>
+        <a class="mail" href="https://wa.me/34622907643">+34 622 907 643 WhatsApp</a>
         <form data-inquire>
           <label>Name <input type="text" name="name" required></label>
           <label>Email <input type="email" name="email" required></label>
