@@ -410,8 +410,9 @@ def year_sort(work):
 
 
 def recent_works(limit=15):
+    pool = [w for w in DATA["works"] if w.get("recent", True)]
     return sorted(
-        DATA["works"],
+        pool,
         key=lambda w: (w.get("recent_rank") or 99, -year_sort(w)),
     )[:limit]
 
@@ -421,11 +422,15 @@ def build_work():
     for i, work in enumerate(recent_works(15)):
         title = work["title"]["en"]
         year = work.get("year")
-        href = f"/{work['series']}/#{work['id']}"
+        series = work.get("series")
+        if series:
+            href = f"/{series}/#{work['id']}"
+        else:
+            href = f"/inquire/?work={quote(title)}" if title else "/inquire/"
         alt = title or f"Abstract painting, {year or ''}".strip()
         spans = f"<span>{year}</span>" if year else ""
         title_html = f"<em>{title}</em>" if title else ""
-        rooms.append(f"""    <section class="room">
+        rooms.append(f"""    <section class="room" id="{work['id']}">
       <figure>
         <a href="{href}">
           {picture(work["image"], alt, work.get("width"), work.get("height"), lazy=i > 0, sizes="(max-width: 700px) 92vw, min(56rem, 80vw)")}

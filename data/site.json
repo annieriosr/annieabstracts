@@ -64,6 +64,25 @@
       "notes": "Title from the file you sent. Size not confirmed. August 2026 catalogue page 5 repeats the Gift of an Abundant Life caption on this different painting."
     },
     {
+      "id": "feel-my-love",
+      "series": null,
+      "title": { "en": "Feel My Love", "es": "Feel My Love" },
+      "year": "2026",
+      "medium": { "en": "Oil on jute", "es": "Óleo en yute" },
+      "dimensions": "210 × 90 cm",
+      "image": "/images/feel-my-love.jpg",
+      "width": 1024,
+      "height": 441,
+      "details": [
+        "/images/feel-my-love-gallery-1.jpg",
+        "/images/feel-my-love-gallery-2.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent_rank": 3,
+      "notes": "Recent Works only for now; not assigned to a series page."
+    },
+    {
       "id": "red-thread",
       "series": "showmeafeeling",
       "title": { "en": "Red Thread", "es": "Hilo Rojo" },
@@ -89,7 +108,8 @@
       "height": 4787,
       "details": ["/images/IMG_1484.JPG", "/images/IMG_0232 2.JPG"],
       "alt_source": "title",
-      "availability": "enquire"
+      "availability": "enquire",
+      "recent": false
     },
     {
       "id": "el-ocaso",
@@ -103,7 +123,8 @@
       "height": 4465,
       "details": ["/images/IMG_1543.jpg", "/images/IMG_1540.jpg", "/images/IMG_1538.jpg"],
       "alt_source": "title",
-      "availability": "enquire"
+      "availability": "enquire",
+      "recent": false
     },
     {
       "id": "blue-mosaics",
@@ -117,7 +138,8 @@
       "height": 3501,
       "details": [],
       "alt_source": "title",
-      "availability": "enquire"
+      "availability": "enquire",
+      "recent": false
     },
     {
       "id": "final-del-verano",
@@ -131,7 +153,8 @@
       "height": 4518,
       "details": ["/images/IMG_1383.jpg", "/images/IMG_1383 (1).JPG", "/images/IMG_1381.jpg"],
       "alt_source": "title",
-      "availability": "enquire"
+      "availability": "enquire",
+      "recent": false
     },
     {
       "id": "sinking-ship",
@@ -160,7 +183,8 @@
       "height": 3654,
       "details": ["/images/IMG_1439.jpg"],
       "alt_source": "title",
-      "availability": "enquire"
+      "availability": "enquire",
+      "recent": false
     },
     {
       "id": "amar-ciegamente",
@@ -174,7 +198,8 @@
       "height": 3271,
       "details": ["/images/IMG_1402.jpg", "/images/IMG_1398.jpg"],
       "alt_source": "title",
-      "availability": "enquire"
+      "availability": "enquire",
+      "recent": false
     },
     {
       "id": "de-donde-venimos",
@@ -216,7 +241,8 @@
       "height": 2051,
       "details": ["/images/sailingspirit1.jpg"],
       "alt_source": "title",
-      "availability": "enquire"
+      "availability": "enquire",
+      "recent": false
     },
     {
       "id": "warm-heart",
