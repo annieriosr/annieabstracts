@@ -177,6 +177,12 @@ def main():
             if overflow_x(page):
                 problems.append(f"{path} horizontal overflow mobile")
             page.screenshot(path=str(OUT / f"{name}-mobile.png"), full_page=False)
+            if name == "home":
+                page.locator('.time-col[data-time="now"] h2').click()
+                page.wait_for_timeout(400)
+                page.screenshot(path=str(OUT / "home-now-mobile.png"), full_page=False)
+                page.locator(".time-col.open .time-close").click()
+                page.wait_for_timeout(250)
             page.set_viewport_size({"width": 1440, "height": 900})
 
         page.goto("http://127.0.0.1:8080/", wait_until="domcontentloaded")

@@ -253,54 +253,123 @@ body.home:has(.time-nav.is-open) .gate {
 .time-nav.is-open + #backdrop { opacity: 1; }
 
 @media (max-width: 700px) {
-  .time-nav { display: block; }
-  .time-nav:not(.is-open) .time-col { pointer-events: none; }
-  .time-col {
+  body.home { overscroll-behavior: none; }
+    --reel-h: min(46vh, 22rem);
+    --tilt: 0deg;
+    --shift-y: 0px;
+    top: 42%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+    touch-action: none;
+    cursor: grab;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 3%,
+      #000 97%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      #000 3%,
+      #000 97%,
+      transparent 100%
+    );
+  }
+  .gate:active { cursor: grabbing; }
+  .gate::before { display: none; }
+  .gate::after {
+    background: radial-gradient(
+      ellipse 80% 120% at 50% 50%,
+      transparent 42%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+  }
+  body.home:has(.time-nav.is-open) .gate {
+    pointer-events: none;
+  }
+
+  .time-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 0.6rem calc(1.15rem + env(safe-area-inset-bottom, 0px));
+    pointer-events: none;
+  }
+  .time-nav:not(.is-open) .time-col {
+    position: static;
+    inset: auto;
+    width: auto;
+    min-height: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    pointer-events: auto;
+    justify-items: center;
+    text-align: center;
+  }
+  .time-nav:not(.is-open) .time-col h2 {
+    grid-row: auto;
+    align-self: auto;
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 1.55rem;
+    padding: 0.9rem 0.85rem;
+    min-width: 4.75rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .time-nav:not(.is-open) .time-col h2:active {
+    font-style: italic;
+  }
+  .time-nav:not(.is-open) .time-links,
+  .time-nav:not(.is-open) .time-close {
+    display: none;
+  }
+
+  .time-nav.is-open {
+    display: block;
+    pointer-events: none;
+  }
+  .time-nav.is-open .time-col {
     position: absolute;
     inset: 0;
     width: 100%;
+    min-height: 100%;
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center !important;
-    text-align: center !important;
+    grid-template-rows: min-content 1fr min-content;
+    justify-items: center;
+    text-align: center;
     pointer-events: none;
+    padding: 1.15rem 1.25rem calc(1.15rem + env(safe-area-inset-bottom, 0px));
   }
-  .time-col > * { grid-column: 1; justify-self: center; }
-  .time-col h2 {
-    pointer-events: all;
-    cursor: pointer;
-    font-size: 1.7rem;
-  }
-  .time-col[data-time="past"] h2 { grid-row: 3; align-self: end; }
-  .time-col[data-time="now"] h2 { grid-row: 2; align-self: center; }
-  .time-col[data-time="future"] h2 { grid-row: 1; align-self: start; }
-  .time-col:not(.open) .time-links { display: none; }
-  .time-col.open h2 { grid-row: 1 !important; align-self: start; }
-  .time-links {
-    grid-row: 2;
-    align-self: center;
-    justify-items: center !important;
-    width: 100%;
-  }
-  .time-links a { font-size: 1.35rem; }
-  .time-close { grid-row: 3; }
   .time-nav.is-open .time-col:not(.open) { visibility: hidden; }
   .time-nav.is-open .time-col.open { pointer-events: all; }
-}
-
-@media (max-width: 700px) {
-  .gate {
-    --reel-h: min(28vh, 12.5rem);
-    --tilt: 0deg;
-    --shift-y: 0px;
-    transform: translateY(-50%) rotate(0deg);
+  .time-nav.is-open .time-col h2 {
+    grid-row: 1;
+    align-self: start;
+    cursor: pointer;
+    font-size: 1.7rem;
+    padding: 0.4rem 0;
   }
-  .gate::before { display: none; }
+  .time-nav.is-open .time-links {
+    display: grid;
+    grid-row: 2;
+    align-self: center;
+    justify-items: center;
+    width: 100%;
+  }
+  .time-nav.is-open .time-links a { font-size: 1.4rem; }
+  .time-nav.is-open .time-close { grid-row: 3; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .time-links a { transform: none; transition: opacity 0.2s ease; }
-  .reel { transform: none !important; }
 }
 
 /* Work: a room for each painting */
