@@ -14,7 +14,8 @@ These works now have sizes from you or from `Portfolio_Annie_Rios_Agosto_2026 (2
 
 ## Years
 
-- **What Remains Below** — no year on the old site (only medium, size, and “Diptych, 2 panel artwork”).
+- **Signed 2026 canvas** (the second painting you sent, with your signature) — the August 2026 catalogue repeats *The Gift of an Abundant Life* and 274 × 150 cm on that page, but it is a different painting. I did not copy that title or size. Please send the real title and dimensions.
+- **What Remains Below** is now dated **2026** from the August catalogue (the old site had no year).
 - **Sinking Ship** is dated 2025 on the Show Me a Feeling page (a 2023–2024 series).
 - **This is Abstraction** — page years 2019–2022; the four works are dated 2023; the CV lists the Lanzarote shows as 2022 and 2023.
 
@@ -71,6 +72,8 @@ JUANNIO is under **Logros destacados**, not as its own exhibition, matching the 
 ## Alt text I wrote (please review)
 
 Old galleries used the title only. I kept that for artworks.
+
+The second 2026 canvas (no confirmed title): **“Abstract painting, 2026”**. Marked as machine-written.
 
 Studio images had generic old alts (“Abstract art piece with vibrant colors”). I used **“Studio view”** on every studio photo. Marked as machine-written.
 

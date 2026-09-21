@@ -29,7 +29,7 @@ PAGES = [
 
 MUST_CONTAIN = {
     "/": ["Past", "Now", "Future"],
-    "/work/": ["Cost of Love", "This is Abstraction"],
+    "/work/": ["Recent works", "The Gift of an Abundant Life", "This is Abstraction"],
     "/about/": ["chromatic flattening", "synergy between beauty and the fractured"],
     "/itinerary/": ["Habitante", "BoConcept", "Show me a Feeling"],
     "/inquire/": ["annieabstracts@gmail.com", "WhatsApp"],

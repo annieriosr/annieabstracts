@@ -123,7 +123,7 @@ def picture(src, alt, width=None, height=None, lazy=True, extra="", sizes=None):
 def hang(work, first=False):
     title_en = work["title"]["en"]
     title_es = work["title"].get("es") or title_en
-    alt = title_en
+    alt = title_en or f"Abstract painting, {work.get('year') or ''}".strip()
     img = picture(
         work["image"],
         alt,
@@ -131,9 +131,12 @@ def hang(work, first=False):
         work.get("height"),
         lazy=not first,
     )
-    title_html = f'<em data-lang="en">{title_en}</em>'
-    if title_es != title_en:
-        title_html += f'<em data-lang="es">{title_es}</em>'
+    title_html = ""
+    if title_en:
+        title_html = f'<em data-lang="en">{title_en}</em>'
+        if title_es != title_en:
+            title_html += f'<em data-lang="es">{title_es}</em>'
+    inquire_q = quote(title_en) if title_en else work["id"]
     thumbs = ""
     if work.get("details"):
         thumbs = '<div class="thumbs">' + "".join(
@@ -145,7 +148,7 @@ def hang(work, first=False):
         <div class="caption">
           {title_html}
           <span class="line">{caption_line(work)}</span>
-          <a class="ask" href="/inquire/?work={quote(title_en)}">Inquire</a>
+          <a class="ask" href="/inquire/?work={inquire_q}">Inquire</a>
           {thumbs}
         </div>
       </article>"""
@@ -199,7 +202,7 @@ def build_series():
         ),
         "threeelementsofarefraction": (
             "Three Elements of a Refraction | Annie Ríos",
-            "Three Elements of a Refraction. Chromatic flattening and light. Annie Ríos, 2024–2025.",
+            "Three Elements of a Refraction. Chromatic flattening and light. Annie Ríos, 2024–2026.",
             "https://www.annieabstracts.com/threeelementsofarefraction",
         ),
     }
@@ -247,7 +250,7 @@ def build_about():
         "Recientemente, su obra “Composition of a Refraction” fue seleccionada por un prestigioso jurado para formar parte de una exposición colectiva en la Fundación Los Carbonel (septiembre de 2024), donde solo diez artistas fueron elegidos. Este logro se suma a su trayectoria, que incluye su primera exposición individual en Madrid (febrero de 2024) y participaciones en colectivas en París y Lanzarote. Annie también ha ampliado su base de coleccionistas en Alemania, Estados Unidos, Francia y Panamá.",
         "Comprometida con el impacto social de su arte, Annie destina parte de sus ganancias a apoyar un orfanato de niños con VIH en Colón, Panamá.",
     ]
-    bio = '      <div class="portrait">' + picture("/images/1234.JPG", "Annie Ríos with two paintings", 2204, 1536, lazy=False) + "</div>\n"
+    bio = '      <div class="portrait">' + picture("/images/annie-with-paintings.jpg", "Annie Ríos standing between two paintings", 1024, 713, lazy=False) + "</div>\n"
     bio += '      <div class="bio" data-lang="en">\n'
     bio += "".join(f"        <p>{p}</p>\n" for p in en_paras)
     bio += "      </div>\n"
@@ -367,7 +370,7 @@ def build_itinerary():
 
 
 def build_inquire():
-    options = ["Studio visit / other"] + [w["title"]["en"] for w in DATA["works"]]
+    options = ["Studio visit / other"] + [w["title"]["en"] for w in DATA["works"] if w["title"]["en"]]
     opts = "\n              ".join(f'<option>{o}</option>' for o in options)
     body = f"""      <div class="door">
         <p class="lead">Institutions, curators, collectors</p>
@@ -397,29 +400,37 @@ def build_inquire():
     write(ROOT / "inquire" / "index.html", html)
 
 
+def year_sort(work):
+    raw = str(work.get("year") or "0")
+    part = raw.replace("–", "-").split("-")[-1].strip()
+    try:
+        return int(part)
+    except ValueError:
+        return 0
+
+
+def recent_works(limit=15):
+    return sorted(
+        DATA["works"],
+        key=lambda w: (w.get("recent_rank") or 99, -year_sort(w)),
+    )[:limit]
+
+
 def build_work():
-    by_id = {w["id"]: w for w in DATA["works"]}
-    featured = [
-        ("cost-of-love", "/images/cost-of-love.jpg", "Cost of Love, 2025", "Cost of Love", "2025", "Guatemala City", "/threeelementsofarefraction/#cost-of-love"),
-        ("composition-of-a-refraction", "/images/refraction1.jpeg", "Composition of a Refraction, 2025", "Composition of a Refraction", "2025", "Panama City", "/threeelementsofarefraction/#composition-of-a-refraction"),
-        ("be-the-light", "/images/be-the-light.jpg", "Be the Light", "Be the Light", None, None, "/threeelementsofarefraction/#be-the-light"),
-        ("red-thread", "/images/red-thread.jpg", "Red Thread", "Red Thread", None, "Madrid, Paris", "/showmeafeeling/#red-thread"),
-        ("sailing-spirit", "/images/sailingspirit.jpg", "Sailing Spirit", "Sailing Spirit", None, "Lanzarote", "/thisisabstraction/#sailing-spirit"),
-    ]
     rooms = []
-    for i, (_id, src, alt, title, year, place, href) in enumerate(featured):
-        work = by_id.get(_id, {})
-        spans = ""
-        if year:
-            spans += f"<span>{year}</span>"
-        if place:
-            spans += f"<span>{place}</span>"
+    for i, work in enumerate(recent_works(15)):
+        title = work["title"]["en"]
+        year = work.get("year")
+        href = f"/{work['series']}/#{work['id']}"
+        alt = title or f"Abstract painting, {year or ''}".strip()
+        spans = f"<span>{year}</span>" if year else ""
+        title_html = f"<em>{title}</em>" if title else ""
         rooms.append(f"""    <section class="room">
       <figure>
         <a href="{href}">
-          {picture(src, alt, work.get("width"), work.get("height"), lazy=i > 0, sizes="(max-width: 700px) 92vw, min(56rem, 80vw)")}
+          {picture(work["image"], alt, work.get("width"), work.get("height"), lazy=i > 0, sizes="(max-width: 700px) 92vw, min(56rem, 80vw)")}
         </a>
-        <figcaption class="caption"><em>{title}</em>{spans}</figcaption>
+        <figcaption class="caption">{title_html}{spans}</figcaption>
       </figure>
     </section>""")
     html = f"""<!DOCTYPE html>
@@ -428,7 +439,7 @@ def build_work():
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Work | Annie Ríos</title>
-  <meta name="description" content="Paintings by Annie Ríos. Chromatic flattening and refraction.">
+  <meta name="description" content="Recent paintings by Annie Ríos. Chromatic flattening and refraction.">
   <link rel="canonical" href="https://www.annieabstracts.com/work">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/site.css">
@@ -436,12 +447,15 @@ def build_work():
 <body class="view">
 {rail(current="work")}
   <main>
+    <header class="view-head">
+      <h1>Recent works</h1>
+    </header>
 {chr(10).join(rooms)}
     <div class="bodies">
       <p>Bodies of work</p>
       <a href="/thisisabstraction/">This is Abstraction<span>2019–2022</span></a>
       <a href="/showmeafeeling/">Show Me a Feeling<span>2023–2024</span></a>
-      <a href="/threeelementsofarefraction/">Three Elements of a Refraction<span>2024–2025</span></a>
+      <a href="/threeelementsofarefraction/">Three Elements of a Refraction<span>2024–2026</span></a>
     </div>
   </main>
   <script src="/js/site.js"></script>
