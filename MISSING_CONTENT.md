@@ -4,16 +4,13 @@ Things I could not take from the old site or the August 2026 CV. Nothing here wa
 
 ## Dimensions
 
-These works have no size on the old site or in `Portfolio_Annie_Rios_Agosto_2026 (2).pdf`. Captions show title, year, and medium only.
+These works now have sizes from you or from `Portfolio_Annie_Rios_Agosto_2026 (2).pdf`.
 
-- Blue Mosaics
-- Final del Verano
-
-Sizes added from that catalogue (February 19, 2026):
-
-- Red Thread — 96 × 115 cm; 2023; Acrylic on canvas, oak wood frame
-- El Ocaso — 110 × 92 cm; 2024; Acrylic on canvas, oak wood frame
-- Casa Amarilla — 70 × 40 cm; 2024; Acrylic on canvas, oak wood frame
+- Red Thread — 96 × 115 cm (catalogue)
+- El Ocaso — 110 × 92 cm (catalogue). You said Final del Verano is the same and you believe that size is **144 × 90 cm**. I used 144 × 90 for Final del Verano and left El Ocaso at the catalogue figure until you confirm.
+- Casa Amarilla — 70 × 40 cm (catalogue)
+- Blue Mosaics — 90 × 90 cm (same as Visual Gallery, as you said)
+- Final del Verano — 144 × 90 cm (as you said)
 
 ## Years
 
