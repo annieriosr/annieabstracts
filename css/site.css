@@ -147,6 +147,12 @@ body.home:has(.time-nav.is-open) .gate {
   will-change: transform;
 }
 
+.reel picture {
+  height: 100%;
+  flex: 0 0 auto;
+  display: flex;
+}
+
 .reel img {
   height: 100%;
   width: auto;
@@ -685,6 +691,11 @@ html[lang="en"] [data-lang="es"] { display: none; }
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-top: 0.9rem;
+}
+
+.hang .thumbs picture {
+  display: flex;
+  height: 4.5rem;
 }
 
 .hang .thumbs img {

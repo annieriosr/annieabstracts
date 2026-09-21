@@ -83,7 +83,15 @@ def src_url(path):
     return "/".join(quote(p) if i else p for i, p in enumerate(parts))
 
 
-def picture(src, alt, width=None, height=None, lazy=True, extra=""):
+def display_webp(src: str):
+    stem = Path(src).stem
+    dest = ROOT / "images" / "display" / f"{stem}-w1600.webp"
+    if dest.exists():
+        return f"/images/display/{dest.name}"
+    return None
+
+
+def picture(src, alt, width=None, height=None, lazy=True, extra="", sizes=None):
     href = src_url(src)
     attrs = [f'src="{href}"', f'alt="{alt}"']
     if width:
@@ -95,11 +103,21 @@ def picture(src, alt, width=None, height=None, lazy=True, extra=""):
     if extra:
         attrs.append(extra)
     img = f"<img {' '.join(attrs)}>"
+    srcset = []
+    disp = display_webp(src)
+    if disp:
+        srcset.append(f"{src_url(disp)} 1600w")
     webp = Path(src.replace("/images/", str(ROOT / "images") + "/")).with_suffix(".webp")
     if webp.exists():
-        webp_src = src_url(src.rsplit(".", 1)[0] + ".webp")
-        return f'<picture><source type="image/webp" srcset="{webp_src}">{img}</picture>'
-    return img
+        w = int(width) if width else 2400
+        srcset.append(f"{src_url(src.rsplit('.', 1)[0] + '.webp')} {w}w")
+    if not srcset:
+        return img
+    sizes_attr = sizes or "(max-width: 800px) 92vw, min(72vw, 52rem)"
+    return (
+        f'<picture><source type="image/webp" srcset="{", ".join(srcset)}" '
+        f'sizes="{sizes_attr}">{img}</picture>'
+    )
 
 
 def hang(work, first=False):
@@ -119,7 +137,7 @@ def hang(work, first=False):
     thumbs = ""
     if work.get("details"):
         thumbs = '<div class="thumbs">' + "".join(
-            f'<img src="{src_url(d)}" alt="" loading="lazy">' for d in work["details"]
+            picture(d, "", lazy=True, sizes="4.5rem") for d in work["details"]
         ) + "</div>"
     # TODO: dimensions missing — left off the public caption
     return f"""      <article class="hang" id="{work['id']}">
@@ -399,7 +417,7 @@ def build_work():
         rooms.append(f"""    <section class="room">
       <figure>
         <a href="{href}">
-          {picture(src, alt, work.get("width"), work.get("height"), lazy=i > 0)}
+          {picture(src, alt, work.get("width"), work.get("height"), lazy=i > 0, sizes="(max-width: 700px) 92vw, min(56rem, 80vw)")}
         </a>
         <figcaption class="caption"><em>{title}</em>{spans}</figcaption>
       </figure>

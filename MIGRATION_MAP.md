@@ -11,12 +11,12 @@ Lighthouse (local, headless Chrome):
 
 | Page | Performance | Accessibility | SEO | Notes |
 |------|-------------|---------------|-----|--------|
-| Home | 74 | 100 | 100 | LCP 38s — home reel still uses full-size JPEGs |
-| Work | 55 | 100 | 100 | LCP 11s — full-size files; width/height now on featured images |
+| Home | 98 | 100 | 100 | LCP 2.4s after strip-sized WebP |
+| Work | 72 | 100 | 100 | LCP 5s; layout shift much lower |
 | Show Me a Feeling | 75 | 100 | 100 | LCP 20s — original files kept at full resolution |
 | About | 81 | 100 | 100 | Best of the four; little image weight |
 
-Work featured images now have width and height to reduce layout shift. Originals stay at full resolution. Remaining speed work: `srcset` display sizes, and use the existing WebP files in the home reel. Accessibility and SEO are already at 100.
+Originals stay at full resolution. Display-sized WebP files sit beside them (`images/display/`, `images/slide/strip/`) and pages request those first. Accessibility and SEO are already at 100.
 
 Content check: every old page/section in the table below is **done** or **intentionally omitted** with a reason. Open facts are in `MISSING_CONTENT.md`.
 

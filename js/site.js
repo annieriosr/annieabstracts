@@ -41,6 +41,10 @@ function initReel() {
   originals.forEach((node) => {
     const clone = node.cloneNode(true);
     clone.setAttribute("aria-hidden", "true");
+    clone.querySelectorAll("img").forEach((img) => {
+      img.loading = "lazy";
+      img.removeAttribute("fetchpriority");
+    });
     reel.appendChild(clone);
   });
 
