@@ -1,9 +1,58 @@
-# Migration map — Phase 0
+# Migration map
 
-Status: **Phase 1–2 built on `content-merge`.** Approved 20 Sep 2026: `_old-site` as archive; Journal/Studio live for SEO only (no nav, no links from other pages); old bio restored; Itinerary = August 2026 CV; Home/Work/CSS rebuilt; En|Es only where Spanish already existed.
+Status: **done on `content-merge`.** PR into New-Site: https://github.com/annieriosr/annieabstracts/pull/1  
+Not merged into `main` or `New-Site`. `Old-Site-branch` and `_old-site/` were not changed.
+
+## Phase 3 verification (20 Sep 2026)
+
+`python3 _verify.py` against a local server: **0 problems**. Desktop and mobile screenshots of every public page are in `_verify/`. No missing alt attributes, no horizontal overflow, no missing image files, no broken internal links, no console errors. Required copy is present on each page.
+
+Lighthouse (local, headless Chrome):
+
+| Page | Performance | Accessibility | SEO | Notes |
+|------|-------------|---------------|-----|--------|
+| Home | 74 | 100 | 100 | LCP 38s — home reel still uses full-size JPEGs |
+| Work | 55 | 100 | 100 | LCP 11s — full-size files; width/height now on featured images |
+| Show Me a Feeling | 75 | 100 | 100 | LCP 20s — original files kept at full resolution |
+| About | 81 | 100 | 100 | Best of the four; little image weight |
+
+Work featured images now have width and height to reduce layout shift. Originals stay at full resolution. Remaining speed work: `srcset` display sizes, and use the existing WebP files in the home reel. Accessibility and SEO are already at 100.
+
+Content check: every old page/section in the table below is **done** or **intentionally omitted** with a reason. Open facts are in `MISSING_CONTENT.md`.
+
+## Final status
+
+| Old item | New home | Status |
+|----------|----------|--------|
+| Homepage | `/` Past / Now / Future | **done** · old intro sentence omitted (new home is image + time nav) |
+| Collections hub | `/work/` | **done** |
+| Show Me a Feeling (8 works) | `/showmeafeeling/` | **done** |
+| This is Abstraction (4 works) | `/thisisabstraction/` | **done** |
+| Three Elements of a Refraction (10 works + essay EN/ES) | `/threeelementsofarefraction/` | **done** · *Cost of Love* is shown |
+| Available Works page | `/threeelementsofarefraction/` | **done** as redirect to the full series |
+| About bio EN + ES | `/about/` | **done** · old six paragraphs restored |
+| About exhibition list | `/itinerary/` | **done** · full August 2026 CV |
+| Studio text + photos/video | `/studio/` | **done** · SEO only, not in nav |
+| Journal index + articles | `/journal/…` | **done** · SEO only, not in nav |
+| Placeholder journal article | — | **intentionally omitted** · redirects to `/journal/` |
+| Materials visual diary | `/studio/` | **intentionally omitted** as its own page · redirect |
+| Inquire / EmailJS forms | `/inquire/` | **done** · mailto + WhatsApp |
+| Aquí, donde la luz nos halla | `/aqui-donde-la-luz-nos-halla/` | **done** |
+| Social links | Itinerary (Instagram) | **done** · Threads/TikTok/Singulart not in nav |
+| Portfolio PDF | `/files/` | **done** as CV download on Itinerary |
+| Empty folders | — | **intentionally omitted** |
+
+Artwork captions live in `data/site.json`. Old URLs redirect in `netlify.toml`.
+
+What is still open is in `MISSING_CONTENT.md` (El Ocaso catalogue size vs 144 × 90; What Remains Below has no year; two journal media files missing; Spanish bio last paragraph is older than English).
+
+---
+
+## Phase 0 recon (kept for the record)
 
 This file maps every piece of the old site onto the new one.  
 I have not copied, rewritten, or deleted any content yet.
+
 
 ---
 

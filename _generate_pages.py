@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
 OLD = ROOT / "_old-site"
@@ -75,8 +76,16 @@ def caption_line(work):
     return "; ".join(bits)
 
 
+def src_url(path):
+    if not path.startswith("/"):
+        return path
+    parts = path.split("/")
+    return "/".join(quote(p) if i else p for i, p in enumerate(parts))
+
+
 def picture(src, alt, width=None, height=None, lazy=True, extra=""):
-    attrs = [f'src="{src}"', f'alt="{alt}"']
+    href = src_url(src)
+    attrs = [f'src="{href}"', f'alt="{alt}"']
     if width:
         attrs.append(f'width="{width}"')
     if height:
@@ -88,7 +97,7 @@ def picture(src, alt, width=None, height=None, lazy=True, extra=""):
     img = f"<img {' '.join(attrs)}>"
     webp = Path(src.replace("/images/", str(ROOT / "images") + "/")).with_suffix(".webp")
     if webp.exists():
-        webp_src = src.rsplit(".", 1)[0] + ".webp"
+        webp_src = src_url(src.rsplit(".", 1)[0] + ".webp")
         return f'<picture><source type="image/webp" srcset="{webp_src}">{img}</picture>'
     return img
 
@@ -110,7 +119,7 @@ def hang(work, first=False):
     thumbs = ""
     if work.get("details"):
         thumbs = '<div class="thumbs">' + "".join(
-            f'<img src="{d}" alt="" loading="lazy">' for d in work["details"]
+            f'<img src="{src_url(d)}" alt="" loading="lazy">' for d in work["details"]
         ) + "</div>"
     # TODO: dimensions missing — left off the public caption
     return f"""      <article class="hang" id="{work['id']}">
@@ -118,7 +127,7 @@ def hang(work, first=False):
         <div class="caption">
           {title_html}
           <span class="line">{caption_line(work)}</span>
-          <a class="ask" href="/inquire/?work={title_en}">Inquire</a>
+          <a class="ask" href="/inquire/?work={quote(title_en)}">Inquire</a>
           {thumbs}
         </div>
       </article>"""
@@ -371,6 +380,7 @@ def build_inquire():
 
 
 def build_work():
+    by_id = {w["id"]: w for w in DATA["works"]}
     featured = [
         ("cost-of-love", "/images/cost-of-love.jpg", "Cost of Love, 2025", "Cost of Love", "2025", "Guatemala City", "/threeelementsofarefraction/#cost-of-love"),
         ("composition-of-a-refraction", "/images/refraction1.jpeg", "Composition of a Refraction, 2025", "Composition of a Refraction", "2025", "Panama City", "/threeelementsofarefraction/#composition-of-a-refraction"),
@@ -380,6 +390,7 @@ def build_work():
     ]
     rooms = []
     for i, (_id, src, alt, title, year, place, href) in enumerate(featured):
+        work = by_id.get(_id, {})
         spans = ""
         if year:
             spans += f"<span>{year}</span>"
@@ -388,7 +399,7 @@ def build_work():
         rooms.append(f"""    <section class="room">
       <figure>
         <a href="{href}">
-          {picture(src, alt, lazy=i > 0)}
+          {picture(src, alt, work.get("width"), work.get("height"), lazy=i > 0)}
         </a>
         <figcaption class="caption"><em>{title}</em>{spans}</figcaption>
       </figure>
@@ -430,8 +441,9 @@ def extract_article(src: Path):
     desc = desc_m.group(1) if desc_m else title
     body_m = re.search(r'<article class="article-body">(.*?)</article>', text, re.S)
     body = body_m.group(1).strip() if body_m else ""
-    body = body.replace("../images/", "/images/").replace("images/", "/images/")
+    body = re.sub(r"(?:\.\./)+images/", "/images/", body)
     body = body.replace('src="//images/', 'src="/images/')
+    body = body.replace('poster="//images/', 'poster="/images/')
     return title, desc, body
 
 
@@ -503,7 +515,7 @@ def build_studio():
     media = re.findall(r'src="\.\./images/([^"]+)"', src)
     cells = []
     for name in media:
-        path = f"/images/{name}"
+        path = src_url(f"/images/{name}")
         if name.lower().endswith(".mp4"):
             cells.append(f'<video controls preload="none" playsinline><source src="{path}" type="video/mp4"></video>')
         else:
