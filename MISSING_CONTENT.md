@@ -82,3 +82,11 @@ Home reel images have empty alt (decorative, matching the live redesign).
 ## Phone number
 
 Public contact is **+34 622 907 643 (WhatsApp)**. The Panama number from the earlier CV is no longer on the site.
+
+## Recent Works photo refresh (Sep 2026)
+
+Improved photos from `/Downloads/Recent Works` replaced the main images for those works (old camera files such as `IMG_5377.JPG` were kept on disk). Gallery / install views were added as detail thumbs.
+
+`Merged/` folder shots are multi-work install views; they were attached as extra details on *Cost of Love* and *Be the Light*. Say if they should live elsewhere.
+
+*The Sun In An Empty Room* was added from that folder (89 × 147 cm from the August 2026 catalogue).
