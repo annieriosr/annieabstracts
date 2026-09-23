@@ -430,12 +430,21 @@ def build_work():
         alt = title or f"Abstract painting, {year or ''}".strip()
         spans = f"<span>{year}</span>" if year else ""
         title_html = f"<em>{title}</em>" if title else ""
+        thumbs = ""
+        if work.get("details"):
+            thumbs = (
+                '<div class="thumbs">'
+                + "".join(
+                    picture(d, "", lazy=True, sizes="4.5rem") for d in work["details"]
+                )
+                + "</div>"
+            )
         rooms.append(f"""    <section class="room" id="{work['id']}">
       <figure>
         <a href="{href}">
           {picture(work["image"], alt, work.get("width"), work.get("height"), lazy=i > 0, sizes="(max-width: 700px) 92vw, min(56rem, 80vw)")}
         </a>
-        <figcaption class="caption">{title_html}{spans}</figcaption>
+        <figcaption class="caption">{title_html}{spans}{thumbs}</figcaption>
       </figure>
     </section>""")
     html = f"""<!DOCTYPE html>

@@ -431,6 +431,25 @@ body.view main {
   margin-right: 0.65rem;
 }
 
+.room .thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.room .thumbs picture {
+  display: flex;
+  height: 4.5rem;
+}
+
+.room .thumbs img {
+  height: 4.5rem;
+  width: auto;
+  max-height: 4.5rem;
+}
+
 .room .caption span {
   display: inline;
   margin: 0 0.25rem;
