@@ -226,6 +226,7 @@ body.home:has(.time-nav.is-open) .gate {
 .time-col.open .time-links a:nth-child(2) { transition-delay: 60ms; }
 .time-col.open .time-links a:nth-child(3) { transition-delay: 110ms; }
 .time-col.open .time-links a:nth-child(4) { transition-delay: 160ms; }
+.time-col.open .time-links a:nth-child(5) { transition-delay: 210ms; }
 
 .time-links a:hover { font-style: italic; }
 
@@ -761,6 +762,79 @@ form button:hover { color: var(--ink); }
 }
 
 .show a:hover { color: var(--ink); }
+
+/* Film — Past */
+.film {
+  max-width: 48rem;
+  padding-top: 2vh;
+}
+
+.film-head {
+  margin-bottom: 2.25rem;
+}
+
+.film-series {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 0.55rem;
+}
+
+.film h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+  line-height: 1.15;
+  margin-bottom: 0.65rem;
+}
+
+.film-cred {
+  font-size: 0.9rem;
+  color: var(--mute);
+}
+
+.film-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+.film-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.film-note {
+  margin-top: 1.75rem;
+  max-width: 36rem;
+}
+
+.film-note p {
+  margin: 0 0 0.85em;
+  line-height: 1.55;
+  font-size: 1rem;
+}
+
+.film-meta {
+  font-size: 0.8rem !important;
+  color: var(--mute);
+}
+
+.film-note a {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--mute);
+}
+
+.film-note a:hover { color: var(--ink); }
 
 @media (max-width: 820px) {
   .id-spread,

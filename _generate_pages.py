@@ -607,6 +607,38 @@ def build_show_page():
     write(ROOT / "aqui-donde-la-luz-nos-halla" / "index.html", html)
 
 
+def build_film_page():
+    body = """      <div class="film">
+        <header class="film-head">
+          <p class="film-series">Voice from Daily Life</p>
+          <h1>Ep. 01 — Annie Abstracts</h1>
+          <p class="film-cred">Text and production by Faustino Huembes</p>
+        </header>
+        <div class="film-frame">
+          <iframe
+            title="Voice from Daily Life — Ep. 01, Annie Abstracts"
+            src="https://player.vimeo.com/video/1221609910?h=6cd157dbef"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="film-note">
+          <p>In the studio and garden, painting as a daily impulse — a film on the practice.</p>
+          <p class="film-meta">HuembesFilms · Director &amp; art direction Faustino Huembes</p>
+          <a href="https://huembesfilms.com/portfolios/voice-from-daily-life-ep-01-annie-abstracts/" rel="noopener noreferrer" target="_blank">View on HuembesFilms</a>
+        </div>
+      </div>
+"""
+    html = page(
+        "Voice from Daily Life — Ep. 01 | Annie Ríos",
+        "Voice from Daily Life, Episode 01. A film on Annie Ríos’s practice. Text and production by Faustino Huembes / HuembesFilms.",
+        "https://www.annieabstracts.com/voice-from-daily-life",
+        body,
+    )
+    write(ROOT / "voice-from-daily-life" / "index.html", html)
+
+
 def main():
     build_series()
     build_about()
@@ -616,6 +648,7 @@ def main():
     build_journal()
     build_studio()
     build_show_page()
+    build_film_page()
 
 
 if __name__ == "__main__":
