@@ -1,0 +1,10 @@
+_old-site
+_mirror
+_verify
+.git
+__pycache__
+*.pyc
+_generate_pages.py
+_optimize_images.py
+_verify.py
+_verify_home.py

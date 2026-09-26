@@ -1,0 +1,636 @@
+{
+  "contact": {
+    "email": "annieabstracts@gmail.com",
+    "phone": "+34 622907643",
+    "whatsapp": "https://wa.me/34622907643",
+    "instagram": "https://www.instagram.com/annieabstracts",
+    "threads": "https://www.threads.net/annieabstracts",
+    "tiktok": "https://www.tiktok.com/@annieabstracts",
+    "singulart": "https://www.singulart.com/en/artist/annie-rios-67181"
+  },
+  "series": [
+    {
+      "id": "thisisabstraction",
+      "path": "/thisisabstraction/",
+      "title": {
+        "en": "This is Abstraction",
+        "es": "Abstracción"
+      },
+      "years": "2019–2022",
+      "hero": "/images/sailingspirit.jpg"
+    },
+    {
+      "id": "showmeafeeling",
+      "path": "/showmeafeeling/",
+      "title": {
+        "en": "Show Me a Feeling",
+        "es": "Muéstrame un Sentimiento"
+      },
+      "years": "2023–2024",
+      "hero": "/images/IMG_3435.jpg"
+    },
+    {
+      "id": "threeelementsofarefraction",
+      "path": "/threeelementsofarefraction/",
+      "title": {
+        "en": "Three Elements of a Refraction",
+        "es": "Los Tres Elementos de una Refracción"
+      },
+      "years": "2024–2026",
+      "hero": "/images/IMG_1435.JPG"
+    }
+  ],
+  "works": [
+    {
+      "id": "the-gift-of-an-abundant-life",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "The Gift of an Abundant Life",
+        "es": "The Gift of an Abundant Life"
+      },
+      "year": "2026",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "274 × 150 cm",
+      "image": "/images/the-gift-of-an-abundant-life-v2.jpg",
+      "width": 1081,
+      "height": 672,
+      "details": [],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent_rank": 1
+    },
+    {
+      "id": "untitled",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "Untitled",
+        "es": "Untitled"
+      },
+      "year": "2026",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": null,
+      "image": "/images/untitled.jpg",
+      "width": 1442,
+      "height": 1758,
+      "details": [
+        "/images/untitled-gallery-1.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent_rank": 2,
+      "notes": "Title from the file you sent. Size not confirmed. August 2026 catalogue page 5 repeats the Gift of an Abundant Life caption on this different painting."
+    },
+    {
+      "id": "feel-my-love",
+      "series": null,
+      "title": {
+        "en": "Feel My Love",
+        "es": "Feel My Love"
+      },
+      "year": "2026",
+      "medium": {
+        "en": "Oil on jute",
+        "es": "Óleo en yute"
+      },
+      "dimensions": "210 × 90 cm",
+      "image": "/images/feel-my-love.jpg",
+      "width": 1281,
+      "height": 552,
+      "details": [
+        "/images/feel-my-love-gallery-1.jpg",
+        "/images/feel-my-love-gallery-2.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent_rank": 3,
+      "notes": "Recent Works only for now; not assigned to a series page."
+    },
+    {
+      "id": "the-sun-in-an-empty-room",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "The Sun In An Empty Room",
+        "es": "The Sun In An Empty Room"
+      },
+      "year": "2026",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "89 × 147 cm",
+      "image": "/images/the-sun-in-an-empty-room.jpg",
+      "width": 1931,
+      "height": 2762,
+      "details": [
+        "/images/the-sun-in-an-empty-room-gallery-1.jpg",
+        "/images/the-sun-in-an-empty-room-gallery-2.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent_rank": 4,
+      "notes": "From Recent Works folder and August 2026 catalogue."
+    },
+    {
+      "id": "red-thread",
+      "series": "showmeafeeling",
+      "title": {
+        "en": "Red Thread",
+        "es": "Hilo Rojo"
+      },
+      "year": "2023",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico y técnica mixta sobre lienzo"
+      },
+      "dimensions": "96 × 115 cm",
+      "image": "/images/09B53636-C040-4AA6-B269-FE1BE53BD0D2.JPG",
+      "width": 1440,
+      "height": 1800,
+      "details": [],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "casa-amarilla",
+      "series": "showmeafeeling",
+      "title": {
+        "en": "Casa Amarilla",
+        "es": "Casa Amarilla"
+      },
+      "year": "2024",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico y técnica mixta sobre lienzo"
+      },
+      "dimensions": "70 × 40 cm",
+      "image": "/images/19-DSC03381.jpg",
+      "width": 3628,
+      "height": 4787,
+      "details": [
+        "/images/IMG_1484.JPG",
+        "/images/IMG_0232 2.JPG"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent": false
+    },
+    {
+      "id": "el-ocaso",
+      "series": "showmeafeeling",
+      "title": {
+        "en": "El Ocaso",
+        "es": "El Ocaso"
+      },
+      "year": "2024",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico y técnica mixta sobre lienzo"
+      },
+      "dimensions": "110 × 92 cm",
+      "image": "/images/3-DSC03352.jpg",
+      "width": 3862,
+      "height": 4465,
+      "details": [
+        "/images/IMG_1543.jpg",
+        "/images/IMG_1540.jpg",
+        "/images/IMG_1538.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent": false
+    },
+    {
+      "id": "blue-mosaics",
+      "series": "showmeafeeling",
+      "title": {
+        "en": "Blue Mosaics",
+        "es": "Mosaicos Azules"
+      },
+      "year": "2023–2024",
+      "medium": {
+        "en": "Acrylic and mixed media on canvas",
+        "es": "Acrílico y técnica mixta sobre lienzo"
+      },
+      "dimensions": "90 × 90 cm",
+      "image": "/images/11-DSC03364.jpg",
+      "width": 3454,
+      "height": 3501,
+      "details": [],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent": false
+    },
+    {
+      "id": "final-del-verano",
+      "series": "showmeafeeling",
+      "title": {
+        "en": "Final del Verano",
+        "es": "Final del Verano"
+      },
+      "year": "2023–2024",
+      "medium": {
+        "en": "Acrylic and mixed media on canvas",
+        "es": "Acrílico y técnica mixta sobre lienzo"
+      },
+      "dimensions": "144 × 90 cm",
+      "image": "/images/7-DSC03359.jpg",
+      "width": 3679,
+      "height": 4518,
+      "details": [
+        "/images/IMG_1383.jpg",
+        "/images/IMG_1383 (1).JPG",
+        "/images/IMG_1381.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent": false
+    },
+    {
+      "id": "sinking-ship",
+      "series": "showmeafeeling",
+      "title": {
+        "en": "Sinking Ship",
+        "es": "Sinking Ship"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on canvas, pine wood frame",
+        "es": "Acrílico sobre lienzo, marco de pino"
+      },
+      "dimensions": "40 × 30 cm",
+      "image": "/images/IMG_1500.JPG",
+      "width": 3475,
+      "height": 4187,
+      "details": [
+        "/images/IMG_1510.jpg",
+        "/images/IMG_1509.jpg",
+        "/images/IMG_1496.JPG"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "notes": "Listed on the Show Me a Feeling page; dated 2025.",
+      "recent": false
+    },
+    {
+      "id": "visual-gallery",
+      "series": "showmeafeeling",
+      "title": {
+        "en": "Visual Gallery",
+        "es": "Visual Gallery"
+      },
+      "year": "2024",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "90 × 90 cm",
+      "image": "/images/9-DSC03362.jpg",
+      "width": 3730,
+      "height": 3654,
+      "details": [
+        "/images/IMG_1439.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent": false
+    },
+    {
+      "id": "amar-ciegamente",
+      "series": "showmeafeeling",
+      "title": {
+        "en": "Amar Ciegamente",
+        "es": "Amar Ciegamente"
+      },
+      "year": "2024",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "90 × 90 cm",
+      "image": "/images/1-DSC03347.jpg",
+      "width": 3310,
+      "height": 3271,
+      "details": [
+        "/images/IMG_1402.jpg",
+        "/images/IMG_1398.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent": false
+    },
+    {
+      "id": "de-donde-venimos",
+      "series": "thisisabstraction",
+      "title": {
+        "en": "De Donde Venimos",
+        "es": "De Donde Venimos"
+      },
+      "year": "2023",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "100 × 70 cm",
+      "image": "/images/IMG_3415.jpg",
+      "width": 2352,
+      "height": 1568,
+      "details": [
+        "/images/IMG_3470 (1).jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "gold-mine",
+      "series": "thisisabstraction",
+      "title": {
+        "en": "Gold Mine",
+        "es": "Mina de Oro"
+      },
+      "year": "2023",
+      "medium": {
+        "en": "Acrylic on paper",
+        "es": "Acrílico sobre papel"
+      },
+      "dimensions": "180 × 80 cm",
+      "image": "/images/IMG_6623.JPG",
+      "width": 2145,
+      "height": 1123,
+      "details": [
+        "/images/IMG_6580.jpg",
+        "/images/IMG_6594.jpg",
+        "/images/IMG_6599.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "sailing-spirit",
+      "series": "thisisabstraction",
+      "title": {
+        "en": "Sailing Spirit",
+        "es": "Espíritu Navegante"
+      },
+      "year": "2023",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "70 × 40 cm",
+      "image": "/images/sailingspirit.jpg",
+      "width": 1568,
+      "height": 2051,
+      "details": [
+        "/images/sailingspirit1.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "recent": false
+    },
+    {
+      "id": "warm-heart",
+      "series": "thisisabstraction",
+      "title": {
+        "en": "Warm Heart",
+        "es": "Corazón Cálido"
+      },
+      "year": "2023",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "100 × 88 cm",
+      "image": "/images/WhatsApp Image 2022-09-23 at 6.31.27 PM.jpg",
+      "width": 1600,
+      "height": 1200,
+      "details": [
+        "/images/IMG_2601.jpg",
+        "/images/IMG_2601 (1).jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "what-remains-below",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "What Remains Below",
+        "es": "What Remains Below"
+      },
+      "year": "2026",
+      "medium": {
+        "en": "Acrylics on canvas",
+        "es": "Acrílicos sobre lienzo"
+      },
+      "dimensions": "194 × 155 cm",
+      "notes": "Diptych, 2 panel artwork. Year 2026 from the August 2026 catalogue.",
+      "image": "/images/what-remains-below.jpg",
+      "width": 1394,
+      "height": 1727,
+      "details": [
+        "/images/what-remains-below-gallery-1.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "cost-of-love",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "Cost of Love",
+        "es": "Cost of Love"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on oakwood canvas",
+        "es": "Acrílico sobre lienzo de roble"
+      },
+      "dimensions": "198 × 144 cm",
+      "image": "/images/cost-of-love.jpg",
+      "width": 2630,
+      "height": 3270,
+      "details": [
+        "/images/cost-of-love-gallery-1.jpg",
+        "/images/cost-of-love-gallery-2.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "featured": true,
+      "place": "Guatemala City"
+    },
+    {
+      "id": "be-the-light",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "Be the Light",
+        "es": "Be the Light"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "150 × 189 cm",
+      "image": "/images/be-the-light.jpg",
+      "width": 1354,
+      "height": 1784,
+      "details": [
+        "/images/be-the-light-gallery-1.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "all-the-ways-we-shine",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "All the Ways We Shine",
+        "es": "All the Ways We Shine"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "150 × 189 cm",
+      "image": "/images/all-the-ways-we-shine.jpg",
+      "width": 3235,
+      "height": 3953,
+      "details": [
+        "/images/all-the-ways-we-shine-gallery-1.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "composition-of-a-refraction-2",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "Composition of a Refraction 2",
+        "es": "Composition of a Refraction 2"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "150 × 184 cm",
+      "image": "/images/composition-of-a-refraction-2.jpg",
+      "width": 1792,
+      "height": 2400,
+      "details": [],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "the-inbetween-space",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "The InBetween Space",
+        "es": "The InBetween Space"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "94 × 114 cm",
+      "image": "/images/the-inbetween-space.jpg",
+      "width": 1792,
+      "height": 2400,
+      "details": [],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "composition-of-a-refraction",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "Composition of a Refraction",
+        "es": "Composition of a Refraction"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "150 × 189 cm",
+      "image": "/images/composition-of-a-refraction.jpg",
+      "width": 1133,
+      "height": 1377,
+      "details": [
+        "/images/composition-of-a-refraction-gallery-1.jpg"
+      ],
+      "alt_source": "title",
+      "availability": "enquire",
+      "featured": true,
+      "place": "Panama City"
+    },
+    {
+      "id": "rhythms-and-reflections-2",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "Rhythms and Reflections 2",
+        "es": "Rhythms and Reflections 2"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "74 × 154 cm",
+      "image": "/images/IMG_3112.png",
+      "width": 1082,
+      "height": 1831,
+      "details": [],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "the-point-of-incidence",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "The Point of Incidence",
+        "es": "The Point of Incidence"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "94 × 114 cm",
+      "image": "/images/IMG_7559 copy.JPG",
+      "width": 1338,
+      "height": 1605,
+      "details": [],
+      "alt_source": "title",
+      "availability": "enquire"
+    },
+    {
+      "id": "rhythms-and-reflections",
+      "series": "threeelementsofarefraction",
+      "title": {
+        "en": "Rhythms and Reflections",
+        "es": "Rhythms and Reflections"
+      },
+      "year": "2025",
+      "medium": {
+        "en": "Acrylic on canvas, oak wood frame",
+        "es": "Acrílico sobre lienzo, marco de roble"
+      },
+      "dimensions": "92 × 150 cm",
+      "image": "/images/IMG_0233.JPG",
+      "width": 1417,
+      "height": 1921,
+      "details": [],
+      "alt_source": "title",
+      "availability": "enquire"
+    }
+  ]
+}
