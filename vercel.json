@@ -1,0 +1,111 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/collections/this-is-abstraction",
+      "destination": "/thisisabstraction",
+      "permanent": true
+    },
+    {
+      "source": "/collections/show-me-a-feeling",
+      "destination": "/showmeafeeling",
+      "permanent": true
+    },
+    {
+      "source": "/collections/three-elements-of-a-refraction",
+      "destination": "/threeelementsofarefraction",
+      "permanent": true
+    },
+    {
+      "source": "/collections",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/show-me-a-feeling",
+      "destination": "/showmeafeeling",
+      "permanent": true
+    },
+    {
+      "source": "/abstraction-2019-2021",
+      "destination": "/thisisabstraction",
+      "permanent": true
+    },
+    {
+      "source": "/the-three-elements-of-a-refraction",
+      "destination": "/threeelementsofarefraction",
+      "permanent": true
+    },
+    {
+      "source": "/threeelementsofarefraction/available-works",
+      "destination": "/threeelementsofarefraction",
+      "permanent": true
+    },
+    {
+      "source": "/journal/panama-madrid-paris-artist-journey",
+      "destination": "/journal/panama-madrid-paris",
+      "permanent": true
+    },
+    {
+      "source": "/journal/artist-journey-panama-madrid-paris",
+      "destination": "/journal/geography-shaped-my-voice",
+      "permanent": true
+    },
+    {
+      "source": "/journal/composition-of-refraction-explained",
+      "destination": "/journal",
+      "permanent": true
+    },
+    {
+      "source": "/journal/materials-and-studio-practice",
+      "destination": "/studio",
+      "permanent": true
+    },
+    {
+      "source": "/journal/centro-espacio-arte-exhibition",
+      "destination": "/journal/centro-espacio-arte",
+      "permanent": true
+    },
+    {
+      "source": "/journal/rhythms-reflections-urban-light",
+      "destination": "/journal/rhythms-and-reflections",
+      "permanent": true
+    },
+    {
+      "source": "/journal/show-me-feeling-series-story",
+      "destination": "/journal/show-me-a-feeling",
+      "permanent": true
+    },
+    {
+      "source": "/journal/color-relationships-abstract-art",
+      "destination": "/journal/color-relationships",
+      "permanent": true
+    },
+    {
+      "source": "/artist-journey-panama-paris.html",
+      "destination": "/journal/artist-journey-panama-paris",
+      "permanent": true
+    },
+    {
+      "source": "/chromatic-flattening-technique.html",
+      "destination": "/journal/chromatic-flattening-technique",
+      "permanent": true
+    },
+    {
+      "source": "/color-relationships-abstract-art.html",
+      "destination": "/journal/color-relationships",
+      "permanent": true
+    },
+    {
+      "source": "/from-pianist-to-visual-artist.html",
+      "destination": "/journal/from-pianist-to-visual-artist",
+      "permanent": true
+    },
+    {
+      "source": "/refraction-collection-explained.html",
+      "destination": "/journal/refraction-collection-explained",
+      "permanent": true
+    }
+  ]
+}

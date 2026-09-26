@@ -1,0 +1,96 @@
+# Missing or ambiguous content
+
+Things I could not take from the old site or the August 2026 CV. Nothing here was invented on the public pages.
+
+## Dimensions
+
+These works now have sizes from you or from `Portfolio_Annie_Rios_Agosto_2026 (2).pdf`.
+
+- Red Thread — 96 × 115 cm (catalogue)
+- El Ocaso — 110 × 92 cm (catalogue). You said Final del Verano is the same and you believe that size is **144 × 90 cm**. I used 144 × 90 for Final del Verano and left El Ocaso at the catalogue figure until you confirm.
+- Casa Amarilla — 70 × 40 cm (catalogue)
+- Blue Mosaics — 90 × 90 cm (same as Visual Gallery, as you said)
+- Final del Verano — 144 × 90 cm (as you said)
+
+## Years
+
+- **Untitled** (2026, signed canvas) — titled from the file you sent. The August 2026 catalogue repeats *The Gift of an Abundant Life* and 274 × 150 cm on that page, but it is a different painting. Size still not confirmed.
+- **What Remains Below** is now dated **2026** from the August catalogue (the old site had no year).
+- **Sinking Ship** is dated 2025 on the Show Me a Feeling page (a 2023–2024 series).
+- **This is Abstraction** — page years 2019–2022; the four works are dated 2023; the CV lists the Lanzarote shows as 2022 and 2023.
+
+## Spanish
+
+Restored only where you already wrote it:
+
+- About bio (full)
+- Three Elements collection essay (full)
+- Some titles (Hilo Rojo, Mosaicos Azules, Mina de Oro, Espíritu Navegante, Corazón Cálido, Muéstrame un Sentimiento, Abstracción)
+
+Not translated (no original Spanish):
+
+- Journal articles
+- Studio intro
+- Most work mediums
+- Itinerary / CV — left in Spanish as in `Portfolio_Annie_Rios_Agosto_2026 (1).pdf`
+
+The English About bio (last exhibition paragraph) is newer than the Spanish one. Spanish still says Fundación Los Carbonel, September 2024, ten artists. English names JUANNIO and Fundación Los Carbonell. I did not blend them.
+
+## Files that were referenced but not found
+
+- `ANNIE_RIOS_CV_FEB_2026 (1).pdf` (old About download)
+- `social-preview.jpg`
+- `video-poster.jpg`
+- `sailingspirit1.jpg` was present
+- Journal media not in `_old-site/images/`: `17899951278316927.jpg`, `18097358356750289.jpg`, `18115078522547282.mp4`
+
+## Intentionally omitted
+
+- `journal/composition-of-refraction-explained.html` — body is still `[Placeholder…]`. Old URL redirects to `/journal/`.
+- `journal/materials-and-studio-practice.html` — photo diary, no prose. Redirects to `/studio/`.
+- Empty old folders: philosophy, process, collection, studio-notes.
+- Old Host Grotesk files, GSAP, EmailJS popups, share widgets, Font Awesome — design, not content.
+- Journal and Studio are **not** in the navigation and are **not** linked from Home, Work, Itinerary, Annie, or Inquire. They stay live for search.
+
+## Typo fixes I made
+
+On the English About bio, from the old About HTML:
+
+- “These achievements **adds**” → “These achievements **add**”
+- “art **insitution** JUANNIO” → “art **institution** JUANNIO”
+
+## CV notes
+
+Itinerary follows `Portfolio_Annie_Rios_Agosto_2026 (1).pdf`.
+
+**Representación / Galería Habitante, 2026** is confirmed.
+
+**ALL THE WAYS WE ARE HUMANS** was shown at BoConcept, Panamá.
+
+JUANNIO is under **Logros destacados**, not as its own exhibition, matching the August PDF. Museo Miraflores (Mayo 2026) is the group-show line for *Cost of Love*.
+
+## Alt text I wrote (please review)
+
+Old galleries used the title only. I kept that for artworks.
+
+The second 2026 canvas (no confirmed title): **“Abstract painting, 2026”**. Marked as machine-written.
+
+Studio images had generic old alts (“Abstract art piece with vibrant colors”). I used **“Studio view”** on every studio photo. Marked as machine-written.
+
+Home reel images have empty alt (decorative, matching the live redesign).
+
+## Phone number
+
+Public contact is **+34 622 907 643 (WhatsApp)**. The Panama number from the earlier CV is no longer on the site.
+
+## Recent Works photo refresh (Sep 2026)
+
+Improved photos from `/Downloads/Recent Works` replaced the main images for those works (old camera files such as `IMG_5377.JPG` were kept on disk). Gallery / install views were added as detail thumbs.
+
+`Merged/` multi-work install shots were removed from the site (too many works per frame). Per-work gallery views only.
+
+*Sinking Ship* is off Recent Works (still on Show Me a Feeling).
+
+*The Gift of an Abundant Life* main image is the wall view from Recent Works (`THE-GIFT-OF-AN-ABUNDANT-LIFE.png`).
+
+*The Sun In An Empty Room* was added from that folder (89 × 147 cm from the August 2026 catalogue).
