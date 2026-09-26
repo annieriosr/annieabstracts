@@ -213,9 +213,73 @@ function initLang() {
   });
 }
 
+/* White-cube enlarge for detail thumbs — no chrome, wall only */
+function initCube() {
+  const triggers = document.querySelectorAll(".thumb[data-full]");
+  if (!triggers.length) return;
+
+  const cube = document.createElement("div");
+  cube.className = "cube";
+  cube.setAttribute("role", "dialog");
+  cube.setAttribute("aria-modal", "true");
+  cube.setAttribute("aria-label", "Detail");
+  cube.hidden = true;
+  cube.innerHTML =
+    '<button type="button" class="cube-close" aria-label="Close"></button>' +
+    '<figure class="cube-stage"><img alt=""></figure>';
+  document.body.appendChild(cube);
+
+  const img = cube.querySelector("img");
+  const closeBtn = cube.querySelector(".cube-close");
+  let lastFocus = null;
+
+  const close = () => {
+    if (cube.hidden) return;
+    cube.classList.remove("is-open");
+    const finish = () => {
+      cube.hidden = true;
+      img.removeAttribute("src");
+      document.body.classList.remove("cube-open");
+      lastFocus?.focus?.();
+    };
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) finish();
+    else setTimeout(finish, 220);
+  };
+
+  const open = (src, from) => {
+    lastFocus = from || document.activeElement;
+    img.src = src;
+    cube.hidden = false;
+    document.body.classList.add("cube-open");
+    requestAnimationFrame(() => cube.classList.add("is-open"));
+    closeBtn.focus();
+  };
+
+  triggers.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const src = btn.getAttribute("data-full");
+      if (src) open(src, btn);
+    });
+  });
+
+  closeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    close();
+  });
+  cube.addEventListener("click", (e) => {
+    if (e.target === cube || e.target.classList.contains("cube-stage")) close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !cube.hidden) close();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initLang();
   initTimeNav();
   initReel();
   initInquire();
+  initCube();
 });

@@ -398,11 +398,14 @@ body.view main {
 
 .room {
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 12vh 0 10vh;
+  padding: 14vh 0 12vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .room figure {
@@ -410,20 +413,30 @@ body.view main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+}
+
+.room > figure > a {
+  display: flex;
+  justify-content: center;
   max-width: 100%;
 }
 
-.room img {
+.room > figure > a img {
   width: auto;
   height: auto;
   max-width: min(56rem, 100%);
-  max-height: 74vh;
+  max-height: 68vh;
+  max-height: 68svh;
   object-fit: contain;
 }
 
 .room .caption {
-  margin-top: 1rem;
+  margin-top: 1.35rem;
   text-align: center;
+  max-width: 36rem;
 }
 
 .room .caption em {
@@ -435,24 +448,98 @@ body.view main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.4rem;
-  margin-top: 0.75rem;
-}
-
-.room .thumbs picture {
-  display: flex;
-  height: 4.5rem;
-}
-
-.room .thumbs img {
-  height: 4.5rem;
-  width: auto;
-  max-height: 4.5rem;
+  gap: 0.55rem;
+  margin-top: 1.15rem;
 }
 
 .room .caption span {
   display: inline;
   margin: 0 0.25rem;
+}
+
+/* Detail thumbs — open in the white cube */
+.thumb {
+  display: flex;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.thumb picture {
+  display: flex;
+  height: 4.5rem;
+}
+
+.thumb img {
+  height: 4.5rem;
+  width: auto;
+  max-height: 4.5rem;
+  object-fit: cover;
+}
+
+@media (hover: hover) {
+  .thumb:hover img { opacity: 0.88; }
+}
+
+/* White-cube enlarge */
+.cube {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.cube.is-open { opacity: 1; }
+
+.cube[hidden] { display: none; }
+
+body.cube-open { overflow: hidden; }
+
+.cube-stage {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube-stage img {
+  width: auto;
+  height: auto;
+  max-width: min(92vw, 72rem);
+  max-height: 88vh;
+  max-height: 88svh;
+  object-fit: contain;
+}
+
+.cube-close {
+  position: absolute;
+  top: clamp(1rem, 3vw, 1.75rem);
+  right: clamp(1rem, 3vw, 1.75rem);
+  width: 2rem;
+  height: 2rem;
+  color: var(--mute);
+  cursor: pointer;
+}
+
+.cube-close::before {
+  content: "×";
+  font-size: 1.35rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+@media (hover: hover) {
+  .cube-close:hover { color: var(--ink); }
 }
 
 /* Inner rooms */
@@ -705,7 +792,7 @@ form button:hover { color: var(--ink); }
     margin-bottom: 1.5rem;
   }
 
-  .hang { min-height: auto; padding: 8vh 0; }
+  .hang { min-height: 100svh; padding: 10svh 0; scroll-snap-align: start; }
 
   body.view .rail {
     position: static;
@@ -714,8 +801,64 @@ form button:hover { color: var(--ink); }
 
   body.view main { padding: 0 1.25rem 4rem; }
 
-  .room { min-height: auto; padding: 6vh 0; }
-  .room img { max-height: 58vh; }
+  /* One work = one phone screen, with air around painting + caption + thumbs */
+  body.view {
+    scroll-snap-type: y proximity;
+  }
+
+  .view-head {
+    min-height: 28svh;
+    padding: 12svh 0 4svh;
+    scroll-snap-align: start;
+  }
+
+  .room {
+    min-height: 100svh;
+    height: 100svh;
+    max-height: 100svh;
+    padding: 7svh 0 6svh;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .room figure {
+    flex: 1;
+    min-height: 0;
+    gap: 0;
+  }
+
+  .room > figure > a {
+    flex: 1 1 auto;
+    min-height: 0;
+    align-items: center;
+    max-height: 58svh;
+  }
+
+  .room > figure > a img {
+    max-width: 100%;
+    max-height: 58svh;
+  }
+
+  .room .caption {
+    margin-top: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .room .thumbs {
+    margin-top: 1.35rem;
+    gap: 0.65rem;
+  }
+
+  .thumb picture,
+  .thumb img {
+    height: 3.75rem;
+    max-height: 3.75rem;
+  }
+
+  .bodies {
+    padding-top: 14svh;
+    scroll-snap-align: start;
+  }
 
   .stamp { margin-bottom: 6vh; }
 
@@ -795,16 +938,16 @@ html[lang="en"] [data-lang="es"] { display: none; }
 .hang .thumbs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.9rem;
+  gap: 0.55rem;
+  margin-top: 1.1rem;
 }
 
-.hang .thumbs picture {
+.hang .thumb picture {
   display: flex;
   height: 4.5rem;
 }
 
-.hang .thumbs img {
+.hang .thumb img {
   height: 4.5rem;
   width: auto;
   max-height: 4.5rem;

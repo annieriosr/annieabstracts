@@ -120,6 +120,20 @@ def picture(src, alt, width=None, height=None, lazy=True, extra="", sizes=None):
     )
 
 
+def detail_thumbs(work):
+    details = work.get("details") or []
+    if not details:
+        return ""
+    buttons = []
+    for d in details:
+        full = src_url(d)
+        buttons.append(
+            f'<button type="button" class="thumb" data-full="{full}" aria-label="Enlarge detail">'
+            f'{picture(d, "", lazy=True, sizes="4.5rem")}</button>'
+        )
+    return '<div class="thumbs">' + "".join(buttons) + "</div>"
+
+
 def hang(work, first=False):
     title_en = work["title"]["en"]
     title_es = work["title"].get("es") or title_en
@@ -137,11 +151,7 @@ def hang(work, first=False):
         if title_es != title_en:
             title_html += f'<em data-lang="es">{title_es}</em>'
     inquire_q = quote(title_en) if title_en else work["id"]
-    thumbs = ""
-    if work.get("details"):
-        thumbs = '<div class="thumbs">' + "".join(
-            picture(d, "", lazy=True, sizes="4.5rem") for d in work["details"]
-        ) + "</div>"
+    thumbs = detail_thumbs(work)
     # TODO: dimensions missing — left off the public caption
     return f"""      <article class="hang" id="{work['id']}">
         {img}
@@ -430,15 +440,7 @@ def build_work():
         alt = title or f"Abstract painting, {year or ''}".strip()
         spans = f"<span>{year}</span>" if year else ""
         title_html = f"<em>{title}</em>" if title else ""
-        thumbs = ""
-        if work.get("details"):
-            thumbs = (
-                '<div class="thumbs">'
-                + "".join(
-                    picture(d, "", lazy=True, sizes="4.5rem") for d in work["details"]
-                )
-                + "</div>"
-            )
+        thumbs = detail_thumbs(work)
         rooms.append(f"""    <section class="room" id="{work['id']}">
       <figure>
         <a href="{href}">
