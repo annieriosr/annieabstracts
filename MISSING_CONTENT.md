@@ -87,6 +87,10 @@ Public contact is **+34 622 907 643 (WhatsApp)**. The Panama number from the ear
 
 Improved photos from `/Downloads/Recent Works` replaced the main images for those works (old camera files such as `IMG_5377.JPG` were kept on disk). Gallery / install views were added as detail thumbs.
 
-`Merged/` folder shots are multi-work install views; they were attached as extra details on *Cost of Love* and *Be the Light*. Say if they should live elsewhere.
+`Merged/` multi-work install shots were removed from the site (too many works per frame). Per-work gallery views only.
+
+*Sinking Ship* is off Recent Works (still on Show Me a Feeling).
+
+*The Gift of an Abundant Life* main image is the wall view from Recent Works (`THE-GIFT-OF-AN-ABUNDANT-LIFE.png`).
 
 *The Sun In An Empty Room* was added from that folder (89 × 147 cm from the August 2026 catalogue).

@@ -55,8 +55,8 @@
       },
       "dimensions": "274 × 150 cm",
       "image": "/images/the-gift-of-an-abundant-life.jpg",
-      "width": 1376,
-      "height": 768,
+      "width": 1081,
+      "height": 672,
       "details": [],
       "alt_source": "title",
       "availability": "enquire",
@@ -274,7 +274,8 @@
       ],
       "alt_source": "title",
       "availability": "enquire",
-      "notes": "Listed on the Show Me a Feeling page; dated 2025."
+      "notes": "Listed on the Show Me a Feeling page; dated 2025.",
+      "recent": false
     },
     {
       "id": "visual-gallery",
@@ -456,10 +457,7 @@
       "height": 3270,
       "details": [
         "/images/cost-of-love-gallery-1.jpg",
-        "/images/cost-of-love-gallery-2.jpg",
-        "/images/install-view-01.jpg",
-        "/images/install-view-02.jpg",
-        "/images/install-view-03.jpg"
+        "/images/cost-of-love-gallery-2.jpg"
       ],
       "alt_source": "title",
       "availability": "enquire",
@@ -483,10 +481,7 @@
       "width": 1354,
       "height": 1784,
       "details": [
-        "/images/be-the-light-gallery-1.jpg",
-        "/images/install-view-04.jpg",
-        "/images/install-view-05.jpg",
-        "/images/install-view-06.jpg"
+        "/images/be-the-light-gallery-1.jpg"
       ],
       "alt_source": "title",
       "availability": "enquire"
