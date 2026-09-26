@@ -624,8 +624,15 @@ def build_film_page():
             referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
         <div class="film-note">
-          <p>In the studio and garden, painting as a daily impulse — a film on the practice.</p>
-          <p class="film-meta">HuembesFilms · Director &amp; art direction Faustino Huembes</p>
+          <p>In her everyday studio and garden, visual artist Annie transforms existential introspection into matter and color, approaching abstract painting not merely as a craft, but as a daily, inevitable impulse.</p>
+          <p>Far from conceiving of art as a mere technical exercise, abstract painting here functions as a direct record of thought and emotion. Through physical contact with raw material, bare hands applying pigments, palette knives shaping densities, and large-format canvases, the artistic process becomes a means of confronting fundamental questions about identity, feeling, and the purpose of existence.</p>
+          <dl class="film-credits">
+            <div><dt>Production</dt><dd>HuembesFilms</dd></div>
+            <div><dt>Director &amp; Art Direction</dt><dd>Faustino Huembes</dd></div>
+            <div><dt>Gaffer / AD</dt><dd>Francis J. Melendez</dd></div>
+            <div><dt>Artist</dt><dd>Annie Ríos</dd></div>
+            <div><dt>Look</dt><dd>Kodak Film Emulation</dd></div>
+          </dl>
           <a href="https://huembesfilms.com/portfolios/voice-from-daily-life-ep-01-annie-abstracts/" rel="noopener noreferrer" target="_blank">View on HuembesFilms</a>
         </div>
       </div>

@@ -765,12 +765,14 @@ form button:hover { color: var(--ink); }
 
 /* Film — Past */
 .film {
-  max-width: 48rem;
-  padding-top: 2vh;
+  max-width: min(72rem, 100%);
+  padding-top: 1vh;
+  width: 100%;
 }
 
 .film-head {
-  margin-bottom: 2.25rem;
+  margin-bottom: 2rem;
+  max-width: 42rem;
 }
 
 .film-series {
@@ -812,24 +814,43 @@ form button:hover { color: var(--ink); }
 }
 
 .film-note {
-  margin-top: 1.75rem;
-  max-width: 36rem;
+  margin-top: 2.25rem;
+  max-width: 40rem;
 }
 
-.film-note p {
-  margin: 0 0 0.85em;
-  line-height: 1.55;
-  font-size: 1rem;
+.film-note > p {
+  margin: 0 0 1.15em;
+  line-height: 1.6;
+  font-size: 1.02rem;
 }
 
-.film-meta {
-  font-size: 0.8rem !important;
+.film-credits {
+  margin: 1.75rem 0 1.5rem;
+  display: grid;
+  gap: 0.55rem;
+  font-size: 0.85rem;
+}
+
+.film-credits > div {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 11rem) minmax(0, 1fr);
+  gap: 0.5rem 1.25rem;
+  align-items: baseline;
+}
+
+.film-credits dt {
   color: var(--mute);
+  font-weight: 400;
+}
+
+.film-credits dd {
+  margin: 0;
+  color: var(--ink);
 }
 
 .film-note a {
   display: inline-block;
-  margin-top: 0.35rem;
+  margin-top: 0.25rem;
   font-size: 0.8rem;
   color: var(--mute);
 }
@@ -842,6 +863,11 @@ form button:hover { color: var(--ink); }
   .hang {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .film-credits > div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
   }
 
   .id-spread { padding: 1.5rem 1.25rem 4rem; min-height: auto; }
