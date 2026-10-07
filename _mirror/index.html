@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKQQ6Q97LG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BKQQ6Q97LG');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Annie Rios is an abstract expressionist artist. Explore her artworks, collections, and exhibitions.">
+  <meta name="keywords" content="Annie Rios, abstract art, modern art, expressionism, contemporary art">
+  <meta name="author" content="Annie Rios">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.annieabstracts.com/">
+  <link rel="icon" href="../images/favicon-32x32.png" type="image/jpeg">
+
+  <!-- Basic Meta tags -->
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="email=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Annie Rios - Abstract Expressionism">
+  <meta name="twitter:description" content="Explore Annie Rios's abstract expressionist work through vibrant color and structured form.">
+  <meta name="twitter:image" content="https://www.annieabstracts.com/images/social-preview.jpg">
+  <meta name="robots" content="index, follow">
+
+  <title>Annie Rios | Abstract Expressionist Art & Refraction</title>
+
+<meta name="description" content="Contemporary abstract art by Annie Rios. Exploring light, color, and geometry through the phenomenon of refraction. Exhibitions in Madrid, Paris & Panama.">
+
+<!-- Open Graph / Social Media Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Annie Rios | Abstract Expressionist Artist">
+<meta property="og:description" content="Spanish-Panamanian abstract expressionist exploring light, refraction, and the human experience through art.">
+<meta property="og:url" content="https://www.annieabstracts.com/">
+<meta property="og:image" content="https://www.annieabstracts.com/images/social-preview.jpg">   
+  
+  
+
+
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+
+  <style>
+    /* ===============================================
+       MODERN MINIMALIST STYLES
+    =============================================== */
+    
+    /* ---------- RESET & BASE STYLES ---------- */
+    :root {
+        --white: #ffffff;
+        --black: #000000;
+        --transition: all 0.3s ease;
+        --transition-slow: all 0.6s ease;
+        --vintage-filter: sepia(0.2) contrast(1.1) brightness(1.05);
+        --font-family: 'Host Grotesk', sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-family);
+        overflow-x: hidden;
+        background-color: var(--white);
+        color: var(--black);
+        line-height: 1.6;
+    }
+
+    /* Font Faces */
+    @font-face {
+        font-family: 'Host Grotesk';
+        src: url('../fonts/HostGroteskwght-BF65bb091d8052b.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Nomada Didone';
+        src: url('../fonts/NomadaDidone-ThinItalic.ttf') format('truetype');
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Nomada Didone';
+        src: url('../fonts/NomadaDidone-ExtrathinItalic.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    /* ---------- HEADER STYLES ---------- */
+    .custom-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 1rem 2rem;
+        transition: var(--transition);
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header-left h1 {
+        font-family: var(--font-family);
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: var(--black);
+        margin: 0;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .header-extras {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .menu-option {
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-weight: 300;
+        color: var(--black);
+        cursor: pointer;
+        transition: var(--transition);
+        opacity: 1;
+    }
+
+    .menu-option:hover {
+        font-style: italic;
+    }
+
+    .language-switcher {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--font-family);
+        font-size: 0.875rem;
+        font-weight: 300;
+        color: var(--black);
+    }
+
+    .lang-option {
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .lang-option:hover {
+        color: #780000;
+    }
+
+    .lang-option.active {
+        font-weight: 500;
+    }
+
+    .lang-separator {
+        color: var(--black);
+    }
+
+    /* ---------- SLIDESHOW SECTION ---------- */
+    .slideshow-section {
+        position: relative;
+        width: 70%;
+        height: 60vh;
+        margin: 120px auto 80px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: var(--vintage-filter);
+        transition: transform 0.8s ease;
+    }
+
+    .slide.active img {
+        transform: scale(1.02);
+    }
+
+    /* Slideshow Navigation Arrows */
+    .slideshow-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .nav-arrow {
+        background: transparent;
+        border: none;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: var(--transition);
+        opacity: 0.3;
+        filter: blur(0.5px);
+    }
+
+    .nav-arrow:hover {
+        opacity: 0.8;
+        filter: blur(0);
+    }
+
+    .nav-arrow i {
+        font-size: 2.2rem;
+        color: #585858;
+        font-weight: 100;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    }
+
+    /* ---------- ABOUT SECTION ---------- */
+    .about-section {
+        padding: 3rem 2rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        font-family: var(--font-family);
+        font-size: 0.95rem;
+        font-weight: 300;
+        line-height: 1.7;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    /* ---------- CONTACT BUTTON ---------- */
+    .contact-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .contact-button {
+        background: transparent;
+        margin-top: 20%;
+        margin-bottom: 20%;
+        border: 1px solid var(--black);
+        padding: 12px 28px;
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: var(--transition-slow);
+        font-family: var(--font-family);
+        font-weight: 400;
+    }
+
+    .contact-button:hover {
+        background: var(--black);
+        color: var(--white);
+        transform: translateY(-2px);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .social-media-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .social-media-links a {
+        color: var(--black);
+        font-size: 1.25rem;
+        transition: var(--transition);
+        text-decoration: none;
+    }
+
+    .social-media-links a:hover {
+        color: #780000;
+        transform: translateY(-2px);
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .footer-links a {
+        font-family: var(--font-family);
+        font-size: 0.75rem;
+        color: #666;
+        text-decoration: none;
+        transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+        color: var(--black);
+    }
+
+    .copyright {
+        font-family: var(--font-family);
+        font-size: 0.75rem;
+        color: #999;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* ---------- MODAL STYLES ---------- */
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+    }
+
+    .modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-content {
+        background: var(--white);
+        padding: 2.5rem;
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+        transform: translateY(50px);
+        transition: transform 0.5s ease;
+    }
+
+    .modal.active .modal-content {
+        transform: translateY(0);
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--black);
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .form-group label {
+        font-family: var(--font-family);
+        font-size: 0.75rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        font-family: var(--font-family);
+        font-size: 0.9rem;
+        transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--black);
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .submit-btn {
+        background: transparent;
+        border: 1px solid var(--black);
+        padding: 12px 28px;
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: var(--transition-slow);
+        font-family: var(--font-family);
+        font-weight: 400;
+        margin-top: 1rem;
+        align-self: flex-start;
+    }
+
+    .submit-btn:hover {
+        background: var(--black);
+        color: var(--white);
+        transform: translateY(-2px);
+    }
+
+    /* ---------- FULLSCREEN MENU ---------- */
+    .fullscreen-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .fullscreen-menu:not(.hidden) {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-items {
+        text-align: center;
+    }
+
+    .menu-item {
+        margin: 1.5rem 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .fullscreen-menu:not(.hidden) .menu-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu-item a {
+        font-size: 2rem;
+        font-weight: 300;
+        color: var(--black);
+        text-decoration: none;
+        transition: var(--transition);
+        display: inline-block;
+        letter-spacing: 0.02em;
+        font-family: var(--font-family);
+    }
+
+    .menu-item a:hover {
+        font-style: italic;
+        transform: translateX(10px);
+    }
+
+    .fullscreen-menu hr {
+        width: 80px;
+        border: none;
+        border-top: 1px solid var(--black);
+        margin: 1rem auto;
+        opacity: 0.3;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /* ---------- RESPONSIVE DESIGN ---------- */
+    @media (max-width: 1200px) {
+        .slideshow-section {
+            width: 85%;
+            height: 45vh;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .slideshow-section {
+            width: 90%;
+            height: 40vh;
+            margin: 100px auto 60px;
+        }
+        
+        .about-section {
+            max-width: 600px;
+            padding: 2rem 1.5rem;
+        }
+        
+        .about-text {
+            font-size: 0.9rem;
+        }
+        
+        .menu-item a {
+            font-size: 1.75rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .custom-header {
+            padding: 0.75rem 1.5rem;
+        }
+        
+        .header-container {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .header-left h1 {
+            font-size: 1.125rem;
+        }
+        
+        .header-extras {
+            gap: 1rem;
+        }
+        
+        .slideshow-section {
+            width: 92%;
+            height: 35vh;
+            margin: 90px auto 50px;
+        }
+        
+        .nav-arrow {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .nav-arrow i {
+            font-size: 1.8rem;
+        }
+        
+        .slideshow-nav {
+            padding: 0 0.5rem;
+        }
+        
+        .about-section {
+            padding: 2rem 1rem;
+            max-width: 500px;
+        }
+        
+        .about-text {
+            font-size: 0.85rem;
+        }
+        
+        .menu-item a {
+            font-size: 1.5rem;
+        }
+        
+        .footer {
+            padding: 1rem 1.5rem;
+        }
+        
+        .social-media-links,
+        .footer-links {
+            gap: 1rem;
+        }
+        
+        .copyright {
+            display: none;
+        }
+        
+        .modal-content {
+            padding: 2rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .custom-header {
+            padding: 0.5rem 1rem;
+        }
+        
+        .header-left h1 {
+            font-size: 1rem;
+        }
+        
+        .header-extras {
+            gap: 0.75rem;
+        }
+        
+        .menu-option {
+            font-size: 0.875rem;
+        }
+        
+        .language-switcher {
+            font-size: 0.75rem;
+        }
+        
+        .slideshow-section {
+            width: 95%;
+            height: 30vh;
+            margin: 80px auto 40px;
+        }
+        
+        .nav-arrow i {
+            font-size: 1.5rem;
+        }
+        
+        .about-text {
+            font-size: 0.8rem;
+        }
+        
+        .contact-button {
+            padding: 10px 24px;
+            font-size: 0.7rem;
+        }
+        
+        .menu-item a {
+            font-size: 1.25rem;
+        }
+        
+        .fullscreen-menu hr {
+            width: 60px;
+            margin: 0.75rem auto;
+        }
+        
+        .footer {
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+        }
+        
+        .copyright {
+            position: static;
+            transform: none;
+            order: -1;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .modal-content {
+            padding: 1.5rem;
+        }
+        
+        .form-group label {
+            font-size: 0.7rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            font-size: 0.85rem;
+            padding: 0.6rem;
+        }
+        
+        .submit-btn {
+            padding: 10px 24px;
+            font-size: 0.7rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+      .slideshow-section{
+        margin-top: 70%;
+      }
+
+      .contact-button{
+        margin-top: 20%;
+
+      }
+      .about-text{
+        margin-top: 20%;
+      }
+
+        .slideshow-section {
+            height: 25vh;
+        }
+        
+        .about-text {
+            font-size: 0.75rem;
+        }
+    }
+
+    /* Landscape orientation fixes */
+    @media (max-height: 500px) and (orientation: landscape) {
+        .slideshow-section {
+            height: 70vh;
+            margin: 80px auto 40px;
+        }
+        
+        .about-section {
+            padding: 3rem 3rem;
+        }
+        
+        .contact-button-container {
+            margin-top: 10rem;
+        }
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="custom-header">
+    <div class="header-container">
+      <!-- Left Section -->
+      <div class="header-left">
+        <h1 data-i18n="header_title" id="artist-name">Annie Rios</h1>
+      </div>
+
+      <!-- Extras Section -->
+      <div class="header-extras">
+        <div class="menu-option" data-i18n="menu_text">Menu</div>
+        <div class="language-switcher">
+          <span class="lang-option active" data-lang="en">En</span>
+          <span class="lang-separator">|</span>
+          <span class="lang-option" data-lang="es">Es</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slideshow Section -->
+  <section class="slideshow-section">
+    <div class="slideshow-container">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="images/1234.JPG" alt="Abstract artwork by Annie Rios">
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="images/12345.jpg" alt="Abstract artwork by Annie Rios">
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="images/123456.jpg" alt="Abstract artwork by Annie Rios">
+      </div>
+      
+      <!-- Slide 4 -->
+      <div class="slide">
+        <img src="images/1234567.jpg" alt="Abstract artwork by Annie Rios">
+      </div>
+      
+      <!-- Slide 5 -->
+      <div class="slide">
+        <img src="images/12345678.jpg" alt="Abstract artwork by Annie Rios">
+      </div>
+      
+      <!-- Slide 6 -->
+      <div class="slide">
+        <img src="images/123456789.jpg" alt="Abstract artwork by Annie Rios">
+      </div>
+    </div>
+    
+    <!-- Slideshow Navigation -->
+    <div class="slideshow-nav">
+      <button class="nav-arrow prev-arrow">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="nav-arrow next-arrow">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-text">
+      Through an exploration of the human and spiritual experience, Annie Rios deconstructs form and emotion. With a refined use of color and her signature flattening technique, Annie creates works that invite introspection. 
+    </div>
+    
+    <div class="contact-button-container">
+      <button class="contact-button">Contact</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-media-links">
+      <a href="https://www.instagram.com/annieabstracts" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.threads.net/annieabstracts" target="_blank" aria-label="Threads">
+        <i class="fab fa-threads"></i>
+      </a>
+      <a href="https://www.tiktok.com/@annieabstracts" target="_blank" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.singulart.com/en/artist/annie-rios-67181?srsltid=AfmBOoomvAeVvSca0_-6pOvlZdsKagqP60ov_AUOf-Qo9F5auDHsMLSx" target="_blank" aria-label="Singulart">
+        <i class="fas fa-globe"></i>
+      </a>
+    </div>
+    
+    <div class="copyright">
+      ©️ 2025 Annie Rios. All rights reserved.
+    </div>
+    
+    <div class="footer-links">
+      <a href="#" id="manage-cookies">Manage Cookies</a>
+      <a href="#" id="contact-link">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div class="modal contact-modal hidden">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <h2>Contact</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fullscreen Menu Overlay -->
+  <div class="fullscreen-menu hidden">
+    <div class="menu-items">
+      <div class="menu-item">
+        <a href="/collections/" class="custom-link" data-i18n="menu_collections">Collections</a>
+      </div>                  
+      <hr>
+      <div class="menu-item">
+        <a class="custom-link" data-i18n="menu_about" href="/about/">About</a>
+      </div>
+      <hr>
+      <div class="menu-item">
+        <a class="custom-link" data-i18n="menu_studio" href="/studio/">The Studio</a>
+      </div>
+      <hr>
+      <div class="menu-item">
+        <a href="/journal/" class="custom-link" data-i18n="menu_journal">Journal</a>
+      </div>                  
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('🎨 Annie Rios - Initializing Website');
+      
+      // Initialize all functionality
+      initMenu();
+      initLanguageSwitcher();
+      initSlideshow();
+      initContactModal();
+      initScrollAnimations();
+      
+      // Ensure menu starts closed
+      const fullscreenMenu = document.querySelector('.fullscreen-menu');
+      if (fullscreenMenu) {
+          fullscreenMenu.classList.add('hidden');
+      }
+    });
+
+    // ---------- SLIDESHOW FUNCTIONALITY ----------
+    function initSlideshow() {
+      const slides = document.querySelectorAll('.slide');
+      const prevArrow = document.querySelector('.prev-arrow');
+      const nextArrow = document.querySelector('.next-arrow');
+      let currentSlide = 0;
+      const slideInterval = 5000; // 5 seconds
+      
+      // Function to show a specific slide
+      function showSlide(n) {
+        // Hide all slides
+        slides.forEach(slide => {
+          slide.classList.remove('active');
+        });
+        
+        // Show the current slide
+        slides[n].classList.add('active');
+        
+        currentSlide = n;
+      }
+      
+      // Function to show next slide
+      function nextSlide() {
+        let next = currentSlide + 1;
+        if (next >= slides.length) {
+          next = 0;
+        }
+        showSlide(next);
+      }
+      
+      // Function to show previous slide
+      function prevSlide() {
+        let prev = currentSlide - 1;
+        if (prev < 0) {
+          prev = slides.length - 1;
+        }
+        showSlide(prev);
+      }
+      
+      // Add click events to navigation arrows
+      if (prevArrow && nextArrow) {
+        prevArrow.addEventListener('click', prevSlide);
+        nextArrow.addEventListener('click', nextSlide);
+      }
+      
+      // Auto-advance slides
+      let slideTimer = setInterval(nextSlide, slideInterval);
+      
+      // Pause slideshow on hover
+      const slideshowContainer = document.querySelector('.slideshow-container');
+      if (slideshowContainer) {
+        slideshowContainer.addEventListener('mouseenter', () => {
+          clearInterval(slideTimer);
+        });
+        
+        slideshowContainer.addEventListener('mouseleave', () => {
+          slideTimer = setInterval(nextSlide, slideInterval);
+        });
+      }
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          prevSlide();
+        } else if (e.key === 'ArrowRight') {
+          nextSlide();
+        }
+      });
+    }
+
+    // ---------- CONTACT MODAL FUNCTIONALITY ----------
+    function initContactModal() {
+      const contactButton = document.querySelector('.contact-button');
+      const contactLink = document.getElementById('contact-link');
+      const contactModal = document.querySelector('.contact-modal');
+      const closeModal = document.querySelector('.close-modal');
+      const contactForm = document.querySelector('.contact-form');
+      
+      // Open modal
+      function openContactModal() {
+        if (contactModal) {
+          contactModal.classList.remove('hidden');
+          setTimeout(() => {
+            contactModal.classList.add('active');
+          }, 10);
+          document.body.style.overflow = 'hidden';
+        }
+      }
+      
+      // Close modal
+      function closeContactModal() {
+        if (contactModal) {
+          contactModal.classList.remove('active');
+          setTimeout(() => {
+            contactModal.classList.add('hidden');
+          }, 500);
+          document.body.style.overflow = 'auto';
+        }
+      }
+      
+      // Add event listeners
+      if (contactButton) {
+        contactButton.addEventListener('click', openContactModal);
+      }
+      
+      if (contactLink) {
+        contactLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          openContactModal();
+        });
+      }
+      
+      if (closeModal) {
+        closeModal.addEventListener('click', closeContactModal);
+      }
+      
+      // Close modal when clicking outside content
+      if (contactModal) {
+        contactModal.addEventListener('click', (e) => {
+          if (e.target === contactModal) {
+            closeContactModal();
+          }
+        });
+      }
+      
+      // Close modal with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && contactModal && !contactModal.classList.contains('hidden')) {
+          closeContactModal();
+        }
+      });
+      
+      // Handle form submission
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          // Here you would typically send the form data to a server
+          alert('Thank you for your message. We will get back to you soon.');
+          closeContactModal();
+          contactForm.reset();
+        });
+      }
+    }
+
+    // ---------- MENU FUNCTIONALITY ----------
+    function initMenu() {
+      const menuOption = document.querySelector('.menu-option');
+      const fullscreenMenu = document.querySelector('.fullscreen-menu');
+      const menuItems = document.querySelector('.menu-items');
+      const body = document.body;
+
+      if (menuOption && fullscreenMenu && menuItems) {
+        // Ensure menu starts in closed state
+        fullscreenMenu.classList.add('hidden');
+        body.style.overflow = 'auto';
+        menuOption.setAttribute('aria-expanded', 'false');
+
+        menuOption.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          if (fullscreenMenu.classList.contains('hidden')) {
+            // Open menu
+            openMenu();
+          } else {
+            // Close menu
+            closeMenu();
+          }
+        });
+
+        // Close menu when clicking on blank space
+        fullscreenMenu.addEventListener('click', function(e) {
+          if (e.target === fullscreenMenu) {
+            closeMenu();
+          }
+        });
+
+        // Allow menu links to work normally
+        fullscreenMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', (e) => {
+            closeMenu();
+          });
+        });
+
+        // Close menu when pressing Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && !fullscreenMenu.classList.contains('hidden')) {
+            closeMenu();
+          }
+        });
+
+        // Prevent menu items from closing the menu when clicked
+        menuItems.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      }
+    }
+
+    function openMenu() {
+      const fullscreenMenu = document.querySelector('.fullscreen-menu');
+      const body = document.body;
+      const menuOption = document.querySelector('.menu-option');
+      
+      if (fullscreenMenu && body && menuOption) {
+        fullscreenMenu.classList.remove('hidden');
+        body.style.overflow = 'hidden';
+        menuOption.setAttribute('aria-expanded', 'true');
+        animateMenuIn();
+      }
+    }
+
+    function closeMenu() {
+      const fullscreenMenu = document.querySelector('.fullscreen-menu');
+      const body = document.body;
+      const menuOption = document.querySelector('.menu-option');
+      
+      if (fullscreenMenu && body && menuOption) {
+        animateMenuOut();
+        setTimeout(() => {
+          fullscreenMenu.classList.add('hidden');
+          body.style.overflow = 'auto';
+          menuOption.setAttribute('aria-expanded', 'false');
+        }, 500);
+      }
+    }
+
+    function animateMenuIn() {
+      const menuItems = document.querySelectorAll('.menu-item');
+      
+      // Reset any previous animations
+      menuItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'none';
+      });
+      
+      // Force reflow
+      void document.querySelector('.fullscreen-menu').offsetHeight;
+      
+      // Animate in
+      menuItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.style.transition = 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, index * 100 + 50);
+      });
+    }
+
+    function animateMenuOut() {
+      const menuItems = document.querySelectorAll('.menu-item');
+      
+      menuItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.style.transition = 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)';
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(20px)';
+        }, index * 50);
+      });
+    }
+
+    // ---------- LANGUAGE SWITCHER ----------
+    function initLanguageSwitcher() {
+      const langOptions = document.querySelectorAll('.lang-option');
+      
+      const translations = {
+        en: {
+          header_title: "Annie Rios",
+          menu_text: "Menu",
+          menu_collections: "Collections",
+          menu_about: "About",
+          menu_studio: "The Studio"
+        },
+        es: {
+          header_title: "Annie Rios",
+          menu_text: "Menú",
+          menu_collections: "Colecciones",
+          menu_about: "Sobre Mí",
+          menu_studio: "El Estudio"
+        }
+      };
+
+      let currentLang = localStorage.getItem('language') || 'en';
+
+      function updateLanguage(lang) {
+        // Update all elements with data-i18n attribute
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+
+        // Update active state
+        langOptions.forEach(option => {
+          option.classList.toggle('active', option.getAttribute('data-lang') === lang);
+        });
+
+        // Save preference
+        localStorage.setItem('language', lang);
+        currentLang = lang;
+      }
+
+      // Add click events to language options
+      langOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          const lang = this.getAttribute('data-lang');
+          updateLanguage(lang);
+        });
+      });
+
+      // Initialize with saved language
+      updateLanguage(currentLang);
+    }
+
+    // ---------- SCROLL ANIMATIONS ----------
+    function initScrollAnimations() {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        // Animate about section on scroll
+        gsap.registerPlugin(ScrollTrigger);
+        
+        gsap.from('.about-text', {
+          scrollTrigger: {
+            trigger: '.about-section',
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+          },
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          ease: "power2.out"
+        });
+        
+        // Header scroll effect
+        gsap.to('.custom-header', {
+          scrollTrigger: {
+            trigger: 'body',
+            start: '50px top',
+            end: 'max',
+            toggleActions: 'play reverse play reverse'
+          },
+          backgroundColor: 'rgba(255, 255, 255, 0.95)',
+          backdropFilter: 'blur(10px)',
+          duration: 0.3
+        });
+      }
+    }
+
+    console.log('✨ Annie Rios Website - Fixed Responsive Version Loaded');
+  </script>
+</body>
+</html>

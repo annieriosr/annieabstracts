@@ -1,0 +1,305 @@
+
+<!-- /* ===============================================
+ABOUT PAGE HTML
+/* ---------- RESET & BASE STYLES ---------- */ -->
+
+<!doctype html>
+<!--
+
+Annie Rios
+Design by Annie Rios
+Code by Annie Rios
+@annieabstracts
+© 2025
+
+-->
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>About My Work &amp; Bio | Annie Rios</title>
+  
+  <meta name="description" content="Annie Rios (b. 2002) explores light, geometry, and refraction through abstract expressionism. Featured in Madrid, Paris, and Panama exhibitions.">
+
+<!-- Open Graph / Social Media Tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Annie Rios - Abstract Expressionist Artist">
+<meta property="og:description" content="Spanish-Panamanian artist exploring the intersection of light, geometry, and the human-spiritual experience through chromatic flattening.">
+<meta property="og:url" content="https://www.annieabstracts.com/about/">
+<meta property="og:image" content="https://www.annieabstracts.com/images/social-preview.jpg">
+
+
+
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Annie Rios">
+    <meta property="og:description" content="Website of the Artist Annie Rios">
+    <meta property="og:url" content="https://www.annieabstracts.com/">
+    <meta property="og:image" content="https://www.annieabstracts.com/images/social-preview.jpg">
+    
+    <!-- Social Media Links -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
+    <!-- Social Media Icons -->
+    <div class="social-media-links">
+      <a href="https://www.instagram.com/annieabstracts" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.threads.net/annieabstracts" target="_blank"><i class="fa fa-threads"></i></a>
+      <a href="https://www.tiktok.com/@annieabstracts" target="_blank"><i class="fa fa-tiktok"></i></a>
+      <a href="https://www.singulart.com/en/artist/annie-rios-67181?srsltid=AfmBOoomvAeVvSca0_-6pOvlZdsKagqP60ov_AUOf-Qo9F5auDHsMLSx" target="_blank"><i class="fa fa-globe"></i></a>
+    </div>
+
+  
+  <!-- Favicon (IMG_4828.jpg) -->
+  <!-- If it's actually a .jpg, you can still use it as a favicon, but .ico or .png is more common.
+       Just be sure to host it on your server, e.g. at /images/IMG_4828.jpg 
+  -->
+  <link rel="icon" href="../images/favicon-32x32.png" type="image/jpeg">
+
+  <!-- Example: Host Grotesk Fonts (WOFF) -->
+  <!-- Place your .woff files in a fonts folder on your server, and reference them here in your CSS -->
+  <style>
+    /* Host Grotesk Light */
+    @font-face {
+      font-family: 'Host Grotesk';
+      src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-Light.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Host Grotesk Light Italic */
+    @font-face {
+      font-family: 'Host Grotesk';
+      src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-LightItalic.woff') format('woff');
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Host Grotesk Regular */
+    @font-face {
+      font-family: 'Host Grotesk';
+      src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Host Grotesk Italic */
+    @font-face {
+      font-family: 'Host Grotesk';
+      src: url('../fonts/host-grotesk-font-family-1737184434-0/HostGrotesk-Italic.woff') format('woff');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Optional: basic usage example */
+    body {
+      margin: 0;
+      font-family: 'Host Grotesk', sans-serif; /* fallback to sans-serif */
+    }
+  </style>
+
+  <!-- Main CSS for your About page -->
+  <!-- Host this file at e.g. /About/About.css on your server -->
+  <link rel="stylesheet" href="About.css" />
+
+  <!-- jQuery (Only if you need it) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  <!-- Your custom JS for the About page -->
+  <!-- Again, ensure the file is accessible at the given path on your server -->
+  <script src="About.js" defer></script>
+</head>
+
+
+<body class="bio">
+<!-- Header -->
+<header class="custom-header">
+  <div class="header-container">
+          <div class="header-left">
+              <a href="/">
+                  <h1 data-i18n="header_title">Annie Rios</h1>
+  
+              </a>
+          </div>
+      </div>
+      <div class="header-extras">
+          <div class="menu-option" data-i18n="menu_label">Menu</div>
+          <div class="language-switcher">
+              <span class="lang-option active" data-lang="en">En</span>
+              <span class="lang-separator">|</span>
+              <span class="lang-option" data-lang="es">Es</span>
+          </div>
+      </div>
+  </div>
+</header>
+
+
+
+  <!-- Loader -->
+  <div id="loader"></div>
+
+<!-- Gradient -->
+<div id="gradient-top">
+  <span class="txt-sans-large">Annie Rios</span>
+  <a class="txt-sans-m" href="/">Close</a>
+</div>
+
+
+  <!-- Main -->
+  <main>
+
+
+    <!-- Module: About my work -->
+    <div id="about" class="module animated">
+      <!-- Title -->
+      <div class="module_title txt-serif-small">
+        About my work
+      </div>
+
+      <!-- About -->
+      <div class="module_statement txt-serif-medium">
+        <p>
+          Annie Ríos (b. 2002), a Spanish-Panamanian abstract expressionist artist and pianist, explores the intersection between light, geometry, and the human-spiritual experience. Through a technique of chromatic flattening, she interprets the phenomenon of refraction, allowing color to coalesce organically—thus transforming everyday elements into serene compositions that invite introspection.
+        </p>
+        <p>
+          For Annie, abstract art is a trace of identity and transformation—a composition charged with intuition and lived experience. Her work evolves like a canvas shaped over time: layers are applied, scraped, and recontextualized, yet its essential energy endures. Fascinated by the dialogue between light and matter, Annie finds in refraction a metaphor for questioning the accelerated pace of urban life, which often distracts us from the essential—the human and spiritual experience. Through abstraction, Annie constructs an intimate space oriented toward absolute personal introspection. She does not seek to impose, but rather to allow being.
+        </p>
+        <p>
+          Her goal is to create a synergy between beauty and the fractured, enabling profound dialogues between the viewer's soul and the material. In this way, her work seeks to foster an internal dialogue within today's generations, proposing a reflective pause amid the abrupt tendency toward distraction.
+        </p>
+        <p>
+          In this exchange between fluidity and geometry, it is the observer who completes the work, integrating their own experience to endow it with existential meaning.
+        </p>
+        <p>
+          Recently, her piece "Composition of a Refraction" was selected to be part of a group exhibition at the Fundación Los Carbonell and her piece “COST OF LOVE” to be part of the 62nd exhibition and auction of the art insitution JUANNIO in Guatemala City. These achievements adds to her trajectory, which includes her first solo exhibition in Madrid (February 2024) and participations in group shows in Paris and Lanzarote. Annie has also expanded her collector base in Germany, the United States, France, and Panama.
+        </p>
+        <p>
+          Committed to the social impact of her art, Annie donates part of her earnings to support an orphanage for children with HIV in Colón, Panama.
+        </p>
+      </div>
+    </div>
+
+    <!-- Download Portfolio Link -->
+    <a href="ANNIE RIOS.pdf" download class="custom-link">
+      <div class="download-portfolio">
+        (Download Portfolio)
+      </div>
+    </a>
+
+    <!-- Module: Solo Shows -->
+    <div class="module animated">
+      <!-- Title -->
+      <div class="module_title txt-serif-small">
+        Solo Shows
+      </div>
+
+      <!-- Block (just one entry) -->
+      <div class="module_block">
+        <div class="module_date txt-serif-small">
+          2024
+        </div>
+        <div class="module_content">
+          <span>Show me a Feeling</span>
+          <span>Art & Sushi</span>
+          <span>Madrid, Spain</span>
+          <span>Feb–Jun 2024</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module: Group Shows -->
+    <div class="module animated">
+      <!-- Title -->
+      <div class="module_title txt-serif-small">
+        Group Shows
+      </div>
+
+      <!-- First Group Show Entry -->
+      <div class="module_block">
+        <div class="module_date txt-serif-small">
+          2024
+        </div>
+        <div class="module_content">
+          <span>Show me a Feeling</span>
+          <span>Rue de Notre-Dame de Nazareth</span>
+          <span>Paris, France</span>
+          <span>Feb 2024</span>
+        </div>
+      </div>
+
+      <!-- Second Group Show Entry -->
+      <div class="module_block">
+        <div class="module_date txt-serif-small">
+          2025
+        </div>
+        <div class="module_content">
+          <span>Three Elements of a Refraction</span>
+          <span>Fundacion Los Carbonell and Proyecto Malayerba at Centro Espacio Arte</span>
+          <span>Piece "Composition of a Refraction" selected</span>
+          <span>Panama City</span>
+          <span>September - November 2025</span>
+        </div>
+        <div class="module_content">
+          <span>COST OF LOVE</span>
+          <span>JUANNIO 62nd Edition </span>
+          <span>Guatemala City, Guatemala</span>
+          <span>February-March 2026</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Module: Art Fairs and Auctions -->
+    <div class="module animated">
+      <!-- Title -->
+      <div class="module_title txt-serif-small">
+        Art Fairs and Auctions
+      </div>
+
+      <!-- First Group Show Entry -->
+      <div class="module_block">
+        <div class="module_date txt-serif-small">
+          2026
+        </div>
+        <div class="module_content">
+          <span>JUANNIO</span>
+          <span>Work “COST OF LOVE” selected for JUANNIO 2026 — 62nd edition of one of Latin America's foremost art institutions</span>
+          <span>Guatemala City</span>
+          <span>Jun 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module: Galleries -->
+    <div class="module animated">
+      <!-- Title -->
+      <div class="module_title txt-serif-small">
+        Galleries
+      </div>
+
+      <!-- Block (one entry) -->
+      <div class="module_block">
+        <div class="module_date txt-serif-small">
+          2022–2023
+        </div>
+        <div class="module_content">
+          <span>Gallery Artisans & Co.</span>
+          <span>Lanzarote, Spain</span>
+          <span>This is Abstraction</span>
+          <span>July 2022 – October 2023</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Annie Rios. All rights reserved.</p>
+  </footer>
+</body>
+</html>
