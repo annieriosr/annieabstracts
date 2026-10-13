@@ -1420,3 +1420,24 @@ footer {
   color: #333;
 }
 
+
+/* Secondary / gallery image */
+.artwork-secondary {
+  margin-top: 8px;
+  width: 100%;
+}
+.artwork-secondary img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.72;
+  transition: opacity 0.2s;
+}
+.artwork-secondary img:hover { opacity: 1; }
+.artwork-secondary-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
