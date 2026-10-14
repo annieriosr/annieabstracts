@@ -40,3 +40,14 @@
   from = "/collections"
   to = "/work"
   status = 301
+
+# Film page not yet restored to the repo — send visitors to the itinerary
+[[redirects]]
+  from = "/voice-from-daily-life"
+  to = "/itinerary"
+  status = 302
+
+[[redirects]]
+  from = "/voice-from-daily-life/*"
+  to = "/itinerary"
+  status = 302
