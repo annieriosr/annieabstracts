@@ -767,6 +767,21 @@ form button:hover { color: var(--ink); }
 
 .show a:hover { color: var(--ink); }
 
+.show-works {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 1.75rem;
+}
+
+.show .show-works a {
+  margin-top: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink);
+}
+
+.show .show-works a:hover { color: var(--mute); }
+
 /* Film — Past */
 .film {
   max-width: min(72rem, 100%);
