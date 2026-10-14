@@ -613,13 +613,13 @@ def build_stillness_page():
         <p>Cosas Ecuador · Booth 16</p>
         <p>Guayaquil</p>
         <p>November 5–15, 2026</p>
-        <p>4 works</p>
+        <p>6 works</p>
         <a href="mailto:annieabstracts@gmail.com?subject=Stillness%20%26%20Refractions">Write</a>
       </div>
 """
     html = page(
         "Stillness &amp; Refractions | Annie Ríos",
-        "Stillness &amp; Refractions. Cosas Ecuador, Booth 16, Guayaquil. November 5–15, 2026. 4 works.",
+        "Stillness &amp; Refractions. Cosas Ecuador, Booth 16, Guayaquil. November 5–15, 2026. 6 works.",
         "https://www.annieabstracts.com/stillness-and-refractions",
         body,
     )
