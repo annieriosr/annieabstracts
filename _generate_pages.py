@@ -607,6 +607,26 @@ def build_show_page():
     write(ROOT / "aqui-donde-la-luz-nos-halla" / "index.html", html)
 
 
+def build_stillness_page():
+    body = """      <div class="show">
+        <h1>Stillness &amp; Refractions</h1>
+        <p>Cosas Ecuador · Booth 16</p>
+        <p>Guayaquil</p>
+        <p>November 5–15, 2026</p>
+        <p>4 works</p>
+        <a href="mailto:annieabstracts@gmail.com?subject=Stillness%20%26%20Refractions">Write</a>
+      </div>
+"""
+    html = page(
+        "Stillness &amp; Refractions | Annie Ríos",
+        "Stillness &amp; Refractions. Cosas Ecuador, Booth 16, Guayaquil. November 5–15, 2026. 4 works.",
+        "https://www.annieabstracts.com/stillness-and-refractions",
+        body,
+    )
+    html = html.replace(rail(), rail(current="itinerary"))
+    write(ROOT / "stillness-and-refractions" / "index.html", html)
+
+
 def build_film_page():
     body = """      <div class="film">
         <header class="film-head">
@@ -655,6 +675,7 @@ def main():
     build_journal()
     build_studio()
     build_show_page()
+    build_stillness_page()
     build_film_page()
 
 
