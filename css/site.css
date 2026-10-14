@@ -1003,6 +1003,25 @@ html[lang="en"] [data-lang="es"] { display: none; }
   color: var(--mute);
 }
 
+.series-switch {
+  margin-top: 1.4rem;
+  font-size: 0.82rem;
+  color: var(--mute);
+}
+.series-switch a { color: var(--mute); }
+.series-switch a:hover { color: var(--ink); }
+.series-switch .sep { margin: 0 0.5rem; color: var(--line); }
+
+.hang .hang-img {
+  display: flex;
+  justify-content: flex-start;
+  cursor: zoom-in;
+}
+.hang .hang-img img { transition: opacity 0.25s ease; }
+@media (hover: hover) {
+  .hang .hang-img:hover img { opacity: 0.9; }
+}
+
 .essay {
   max-width: 38rem;
   margin: 0 0 8vh;

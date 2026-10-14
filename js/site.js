@@ -149,8 +149,51 @@ function initInquire() {
   });
 }
 
+function initCube() {
+  const triggers = document.querySelectorAll("[data-cube]");
+  if (!triggers.length) return;
+
+  const cube = document.createElement("div");
+  cube.className = "cube";
+  cube.hidden = true;
+  cube.innerHTML =
+    '<button class="cube-close" aria-label="Close"></button>' +
+    '<figure class="cube-stage"><img alt=""></figure>';
+  document.body.appendChild(cube);
+
+  const stageImg = cube.querySelector(".cube-stage img");
+  const closeBtn = cube.querySelector(".cube-close");
+
+  function open(src, alt) {
+    stageImg.src = src;
+    stageImg.alt = alt || "";
+    cube.hidden = false;
+    document.body.classList.add("cube-open");
+    requestAnimationFrame(() => cube.classList.add("is-open"));
+  }
+  function close() {
+    cube.classList.remove("is-open");
+    document.body.classList.remove("cube-open");
+    setTimeout(() => { cube.hidden = true; stageImg.removeAttribute("src"); }, 240);
+  }
+
+  triggers.forEach((t) => {
+    t.addEventListener("click", (e) => {
+      e.preventDefault();
+      const img = t.querySelector("img");
+      open(t.getAttribute("href") || (img && img.src), img && img.alt);
+    });
+  });
+  closeBtn.addEventListener("click", close);
+  cube.addEventListener("click", (e) => { if (e.target === cube) close(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !cube.hidden) close();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initTimeNav();
   initReel();
   initInquire();
+  initCube();
 });
